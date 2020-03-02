@@ -144,11 +144,6 @@ html {
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
-/*
-.background_main_img {
-	position: relative;
-	width: 100;
-}*/
 
 .home_page_1 {
 	background-image: url("images/voiture2.jpg");
@@ -169,20 +164,48 @@ html {
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
+.home_page_2 {
+	background-image: url("images/all_icons2.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: 0%;
+	width: 98%;
+	margin: 0px;
+	height: 320px;
+
+}
+
+
 .home_page_2 h2 { 
-	margin: 1em 0 0 0;
+	text-align: center;
 	color: #2e484c;
 	font-family: 'Helvetica Neue', sans-serif;
 	font-size: 1.8em;
 	font-weight: normal;
 	text-transform: uppercase;
-	display: flex;
-	justify-content: center;
-}
-.home_page_2 .icone1{
-	width: 100%;
-	top: 100px;
-
+	display: flex;	
 }
 
+.column {
+  float: left;
+  width: 33.33%;
+  margin:0px;
+}
 
+
+.home_page_3:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.home_page_3 h2 {
+	font-family:'Helvetica Neue', sans-serif; 
+	text-transform: uppercase;
+	text-align: center;
+	color : #4f4f4f;
+	font-size: 750%;
+	letter-spacing: 3px;
+	margin: 0px;
+}
