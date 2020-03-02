@@ -200,6 +200,7 @@ html {
 }
 
 
+
 .home_page_3 h2 {
 	font-family:'Helvetica Neue', sans-serif; 
 	text-transform: uppercase;
@@ -208,4 +209,17 @@ html {
 	font-size: 750%;
 	letter-spacing: 3px;
 	margin: 0px;
+	height: 150px;
 }
+
+.home_page_4 {
+	background-image: url("images/mesures2.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-attachment: fixed;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	height: 900px;
+}
+
