@@ -85,7 +85,7 @@ html {
 }
 
 .menu_bar a:hover {
-    background-color: #555;
+    background-color: #5F829B;
     color: white;
 }
 
@@ -103,7 +103,7 @@ html {
 }
 
 .menu_bar .active {
-    background-color: #0074D9;
+    background-color: #28576D;
     color: white;
 }
 
