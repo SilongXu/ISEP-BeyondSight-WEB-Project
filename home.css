@@ -35,7 +35,7 @@ html {
 	top: 0px;
 	left: 0px;
 	right: 0px;
-    background-color: #97caef;
+    background-color: #192933;
     border-radius: 25px;
     z-index: 10;
 }
@@ -74,7 +74,7 @@ html {
 
 .menu_bar a {
 	display: block;
-    color: #000;
+    color: #FFF;
     padding: 8px 16px 8px 16px;
     min-width: 100px;
     text-decoration: none;
