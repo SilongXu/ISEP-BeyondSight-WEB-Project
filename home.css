@@ -120,13 +120,22 @@ html {
 }
 
 .bs_title {
+	font-family: "Helvetica Neue";
 	position: relative;
-	top: 250px;
+	top: 55px;
+	font-size: 4.2em;
+	text-transform: uppercase;
+	font-weight: bold;
+	color:#FFF;
+	letter-spacing: 30px;
 }
 
 .bs_subtitle {
+	font-family: "Helvetica Neue";
 	position: relative;
-	top: 260px;
+	top: 300;
+	letter-spacing: 5px;
+	color:#FFF;
 }
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
@@ -143,10 +152,12 @@ html {
 
 .home_page_1 {
 	background-image: url("images/voiture.jpg");
-	background-repeat: no-repeat;
 	background-size: 100%;
 	width: 100%;
+	margin: 0;
+	padding: 0;
 	height: 500px;
+
 }
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
@@ -163,3 +174,4 @@ html {
 	font-weight: normal;
 	text-transform: uppercase;
 }
+
