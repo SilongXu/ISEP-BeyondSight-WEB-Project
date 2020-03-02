@@ -5,7 +5,7 @@ html {
 }
 
 * {
-	font-family: "Century Gothic", Arial, sans-serif;
+	font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!! */
@@ -117,7 +117,7 @@ html {
 	display: flex;
 	justify-content: center;
 	color: white;
-	font-family: "Century Gothic";
+	font-family: "Helvetica Neue";
 }
 
 .bs_title {
@@ -159,7 +159,7 @@ html {
 .home_page_2 h2 { 
 	margin: 2em 0 0 0;
 	color: #2e484c;
-	font-family: 'Julius Sans One', sans-serif;
+	font-family: 'Helvetica Neue', sans-serif;
 	font-size: 1.8em;
 	font-weight: normal;
 	text-transform: uppercase;
