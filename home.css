@@ -152,6 +152,7 @@ html {
 
 .home_page_1 {
 	background-image: url("images/voiture2.jpg");
+	box-sizing: border-box;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: 100%;
@@ -169,7 +170,7 @@ html {
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 .home_page_2 h2 { 
-	margin: 2em 0 0 0;
+	margin: 1em 0 0 0;
 	color: #2e484c;
 	font-family: 'Helvetica Neue', sans-serif;
 	font-size: 1.8em;
@@ -178,4 +179,10 @@ html {
 	display: flex;
 	justify-content: center;
 }
+.home_page_2 .icone1{
+	width: 100%;
+	top: 100px;
+
+}
+
 
