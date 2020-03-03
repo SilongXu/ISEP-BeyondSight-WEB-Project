@@ -231,6 +231,8 @@ html {
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 .faq_page_1{
+	background-image: url("images/faq.jpg");
+	background-attachment: fixed;
 	background-color: #333;
 	background-size: 100%;
 	width: 100%;
@@ -257,6 +259,7 @@ html {
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 .contact_page_1{
+	background-image: url("images/contact.jpg");
 	background-color: #333;
 	background-size: 100%;
 	width: 100%;
@@ -271,7 +274,8 @@ html {
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
-.faq_page_1{
+.our_story_page_1{
+	background-image: url("images/library.jpg");
 	background-color: #333;
 	background-size: 100%;
 	width: 100%;
