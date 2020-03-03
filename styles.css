@@ -1,0 +1,234 @@
+
+html {
+	margin: 0;
+	padding: 0;
+}
+
+* {
+	font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+/* !!!!! Menu Bar Global !!!!! */
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/*
+.icon_menu {
+	width: 50px;
+	border-radius: 50%;
+	transition: hover 0.3s ease-out;
+	position: absolute;
+	right: 0%;
+	top: 0%;
+}
+
+.icon_menu:hover .menu_bar {
+	display: flex;
+}
+*/
+
+.menu_bar {
+	display: flex;
+	width: 100%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+    background-color: #192933;
+    z-index: 10;
+}
+
+.menu_bar .left, .center, .right {
+	display: flex;
+	flex-direction: horizontal;
+	text-align: center;
+	padding: 5px;
+}
+
+.menu_bar .left {
+	width: 30%;
+	margin-left: 3%;
+}
+
+.menu_bar .center {
+    width: 50%;
+}
+
+.menu_bar .right {
+	width: 20%;
+}
+
+.menu_bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+/* !!!!! Menu Bar Elements !!!!! */
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+.menu_bar a {
+	display: block;
+    color: #FFF;
+    padding: 8px 16px 8px 16px;
+    min-width: 100px;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 20px;
+    transition: background-color 0.3s ease-out,
+    			color 0.1s ease-out;
+}
+
+.menu_bar a:hover {
+    background-color: #5F829B;
+    color: white;
+}
+
+.menu_bar img {
+	width: 30px;
+	border-radius: 50%;
+	transition: width 0.3s ease-out;
+	position: absolute;
+}
+
+.menu_bar img:hover {
+	width: 50px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+	position: absolute;
+}
+
+.menu_bar .active {
+    background-color: #28576D;
+    color: white;
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+/* !!!!! Titre Milieu de Page !!!!! */
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+.bs_title, .bs_subtitle {
+	display: flex;
+	justify-content: center;
+	color: white;
+	font-family: "Helvetica Neue";
+}
+
+.bs_title {
+	font-family: "Helvetica Neue";
+	position: relative;
+	top: 55px;
+	font-size: 4.2em;
+	text-transform: uppercase;
+	font-weight: bold;
+	color:#FFF;
+	letter-spacing: 30px;
+}
+
+.bs_subtitle {
+	font-family: "Helvetica Neue";
+	position: relative;
+	top: 300;
+	letter-spacing: 5px;
+	color:#FFF;
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+/* !!!!! Image Background Main !!!!! */
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+.home_page_1 {
+	background-image: url("images/voiture2.jpg");
+	box-sizing: border-box;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	height: 500px;
+
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+/* !!!!!!!!!! Home Page 2 !!!!!!!!!! */
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+.home_page_2 {
+	background-image: url("images/all_icons2.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: 0%;
+	width: 98%;
+	margin: 0px;
+	height: 320px;
+
+}
+
+
+.home_page_2 h2 { 
+	text-align: center;
+	color: #2e484c;
+	font-family: 'Helvetica Neue', sans-serif;
+	font-size: 1.8em;
+	font-weight: normal;
+	text-transform: uppercase;
+	display: flex;	
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  margin:0px;
+}
+
+
+.home_page_3:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+.home_page_3 h2 {
+	font-family:'Helvetica Neue', sans-serif; 
+	text-transform: uppercase;
+	text-align: center;
+	color : #4f4f4f;
+	font-size: 750%;
+	letter-spacing: 3px;
+	margin: 0;
+	padding: 0;
+	height: 150px;
+}
+
+.home_page_4 {
+	background-image: url("images/mesures2.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-attachment: fixed;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	height: 900px;
+}
+
+.faq_page_1{
+	background-color: #333;
+	background-size: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	height: 600px;
+}
