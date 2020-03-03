@@ -169,11 +169,11 @@ html {
 	text-transform: uppercase;
 	text-align: center;
 	color : #4f4f4f;
-	font-size: 200%;
+	font-size: 250%;
 	letter-spacing: 3px;
 	margin: 0;
 	padding-top: 5%;
-	height: 150px;
+	height: 200px;
 	background-color: #FFF;
 }
 
@@ -189,11 +189,11 @@ html {
 	text-transform: uppercase;
 	text-align: center;
 	color : #4f4f4f;
-	font-size: 650%;
+	font-size: 550%;
 	letter-spacing: 3px;
 	margin: 0;
 	padding: 0;
-	height: 150px;
+	height: 110px;
 	background-color: #FFF;
 }
 
@@ -202,7 +202,7 @@ html {
 	text-transform: uppercase;
 	text-align: center;
 	color : #4f4f4f;
-	font-size: 200%;
+	font-size: 175%;
 	letter-spacing: 3px;
 	margin: 0;
 	height: 150px;
@@ -221,7 +221,6 @@ html {
 	background-image: url("images/mesures3.jpg");
 	background-repeat: no-repeat;
 	background-size: 100%;
-	/*background-attachment: fixed;*/
 	width: 100%;
 	margin: 0;
 	padding: 0;
