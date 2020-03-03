@@ -282,6 +282,7 @@ html {
 	background-image: url("images/contact3.jpg");
 	background-color: #333;
 	background-size: 100%;
+	background-attachment: fixed;
 	background-repeat: no-repeat;
 	width: 100%;
 	margin: 0;
