@@ -13,20 +13,6 @@ html {
 /* !!!!! Menu Bar Global !!!!! */
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!! */
-/*
-.icon_menu {
-	width: 50px;
-	border-radius: 50%;
-	transition: hover 0.3s ease-out;
-	position: absolute;
-	right: 0%;
-	top: 0%;
-}
-
-.icon_menu:hover .menu_bar {
-	display: flex;
-}
-*/
 
 .menu_bar {
 	display: flex;
@@ -56,7 +42,11 @@ html {
 }
 
 .menu_bar .right {
-	width: 20%;
+	width: 15%;
+}
+
+.menu_bar .langues {
+	width: 5%;
 }
 
 .menu_bar {
@@ -71,7 +61,7 @@ html {
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
-.menu_bar a {
+.menu_bar .left a, .center a, .right a {
 	display: block;
     color: #FFF;
     padding: 8px 16px 8px 16px;
@@ -83,7 +73,7 @@ html {
     			color 0.1s ease-out;
 }
 
-.menu_bar a:hover {
+.menu_bar .left a:hover, .center a:hover, .right a:hover {
     background-color: #5F829B;
     color: white;
 }
@@ -105,6 +95,83 @@ html {
     background-color: #28576D;
     color: white;
 }
+
+.menu_bar .langues {
+	display: inline-block;
+	justify-content: center;
+	background-color: #5F829B;
+	padding: 5px;
+	text-decoration: none;
+    color: white;
+    text-align: center;
+	border-radius: 5px 5px 5px 5px;
+    position: absolute;
+    top: 8px;
+    right: 1px;
+    height: 28px;
+    width: 40px;
+}
+
+.menu_bar .not_choosen_language {
+	display: none;
+	position: absolute;
+	right: 1px;
+	border-radius: 5px 5px 5px 5px;
+    min-width: 40px;
+    padding: 5px;
+	background-color: #5F829B;
+	z-index: 1;
+	/*box-shadow: 8px 8px 16px 0px rgba(0,0,0,0.4);*/
+}
+
+.menu_bar .langues:hover .not_choosen_language {
+	display: block;
+}
+
+.menu_bar .not_choosen_language ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	min-width: 50px;
+	background-color: #5F829B;
+}
+
+.menu_bar .not_choosen_language a {
+	display: block;
+	color: white;
+	text-decoration: none;
+	padding: 5px;
+}
+
+.menu_bar .not_choosen_language a:hover {
+	background-color: #28576D;
+	border-radius: 5px 5px 5px 5px;
+}
+
+
+
+/*
+.menu_bar .not_choosen_language a {
+	background-color: #4f4f4f;
+	padding: 4px;
+	text-decoration: none;
+    color: #FFF;
+    text-align: center;
+    width: 40px;
+    border-radius: 50%;
+	position: absolute;
+	top: 40px;
+	right: 2px;
+    height: 40px;
+    width: 40px;
+}*/
+
+/*
+.menu_bar .choosen_language:hover {
+    background-color: #5F829B;
+    color: white;
+}*/
+
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
