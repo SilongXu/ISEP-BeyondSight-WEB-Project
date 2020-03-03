@@ -230,8 +230,8 @@ html {
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
-.faq_page_1{
-	background-image: url("images/faq.jpg");
+.faq_div_1{
+	background-image: url("images/FAQ2.jpg");
 	background-attachment: fixed;
 	background-color: #333;
 	background-size: 100%;
@@ -241,15 +241,31 @@ html {
 	height: 500px;
 }
 
+.faq_div_2,..faq_div_3, .faq_div_4, .faq_div_5, .faq_div_6{
+	margin-bottom: 100px;
+}
+
+
 .question{
 	text-align: center;
 	justify-content: center;
 	color: #2e484c;
 	font-family: 'Helvetica Neue', sans-serif;
-	font-size: 1.8em;
+	font-size: 2.2em;
 	font-weight: normal;
 	text-transform: uppercase;
 	display: flex;	
+}
+
+.answer{
+	text-align: center;
+	justify-content: center;
+	color: #2e484c;
+	font-family: 'Helvetica Neue', sans-serif;
+	font-size: 1.0em;
+	font-weight: normal;
+	display: flex;
+	height: 100px;
 }
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
