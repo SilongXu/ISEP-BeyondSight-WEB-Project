@@ -214,14 +214,14 @@ html {
 }
 
 .home_page_4 {
-	background-image: url("images/mesures2.jpg");
+	background-image: url("images/mesures3.jpg");
 	background-repeat: no-repeat;
 	background-size: 100%;
-	background-attachment: local;
+	/*background-attachment: fixed;*/
 	width: 100%;
 	margin: 0;
 	padding: 0;
-	height: 900px;
+	height: 750px;
 }
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
