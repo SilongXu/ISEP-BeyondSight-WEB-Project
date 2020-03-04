@@ -445,19 +445,23 @@ input[type=submit]:hover {
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 .inscription_div_1{
-	background-image: url("images/inscription2.jpg");
+	background-image: url("images/inscription.jpg");
 	background-color: #333;
 	background-size: 100%;
-	background-attachment: fixed;
+
 	background-repeat: no-repeat;
+	display:flex; 
 	width: 100%;
-	margin: 0;
-	padding: 0;
-	height: 500px;
+	position: fixed;
+	height: 750px;
+	overflow: hidden;
 
 }
 
 .inscription_title {
+	position: absolute;
+	left: 42.5%;
+	top: 7%;
     text-align: center;
 	justify-content: center;
 	color: #2e484c;
@@ -468,11 +472,32 @@ input[type=submit]:hover {
 	display: flex;
 }
 
+input[type=text], select, textarea .champ {
+  width: 30%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  text-align: center;
+  resize: vertical;
+  display: list-item;
+  margin-left: 35%;
+}
+
 
 .form {
-	height: 1000px;
-	border-radius: 5px;
+
+	position: absolute;
+	left:30%;
+	top: 17%;
+	height: 600px;
+	border-radius: 20px;
+	width: 40%;
 	background-color: #DFE7EE;
 	padding: 30px;
+	justify-content: center;
+	text-align: center;
 }
 
