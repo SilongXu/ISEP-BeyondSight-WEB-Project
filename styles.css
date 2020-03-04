@@ -102,7 +102,7 @@ html {
 .menu_bar .langues {
 	display: inline-block;
 	justify-content: center;
-	background-color: #5F829B;
+	background-color: #4F6B7F;
 	padding: 5px;
 	text-decoration: none;
     color: white;
@@ -110,7 +110,7 @@ html {
 	border-radius: 5px 5px 5px 5px;
     position: absolute;
     top: 8px;
-    right: 1px;
+    right: 1.5%;
     height: 28px;
     width: 40px;
 }
@@ -122,7 +122,7 @@ html {
 	border-radius: 5px 5px 5px 5px;
     min-width: 40px;
     padding: 5px;
-	background-color: #5F829B;
+	background-color: #4F6B7F;
 	z-index: 1;
 	/*box-shadow: 8px 8px 16px 0px rgba(0,0,0,0.4);*/
 }
@@ -136,7 +136,7 @@ html {
 	margin: 0;
 	padding: 0;
 	min-width: 50px;
-	background-color: #5F829B;
+	background-color: #4F6B7F;
 }
 
 .menu_bar .not_choosen_language a {
@@ -153,28 +153,6 @@ html {
 
 
 
-/*
-.menu_bar .not_choosen_language a {
-	background-color: #4f4f4f;
-	padding: 4px;
-	text-decoration: none;
-    color: #FFF;
-    text-align: center;
-    width: 40px;
-    border-radius: 50%;
-	position: absolute;
-	top: 40px;
-	right: 2px;
-    height: 40px;
-    width: 40px;
-}*/
-
-/*
-.menu_bar .choosen_language:hover {
-    background-color: #5F829B;
-    color: white;
-}*/
-
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
@@ -183,14 +161,14 @@ html {
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 .bs_title, .bs_subtitle {
+	font-family: "Helvetica Neue", sans-serif;
 	display: flex;
 	justify-content: center;
 	color: white;
-	font-family: "Helvetica Neue";
 }
 
 .bs_title {
-	font-family: "Helvetica Neue";
+	font-family: "Helvetica Neue", sans-serif;
 	position: relative;
 	top: 55px;
 	font-size: 4.2em;
@@ -198,12 +176,15 @@ html {
 	font-weight: bold;
 	color:#FFF;
 	letter-spacing: 30px;
+	opacity: 75%;
 }
 
 .bs_subtitle {
-	font-family: "Helvetica Neue";
+	font-family: "Helvetica Neue", sans-serif;
+	font-style: italic;
 	position: relative;
 	top: 300;
+	opacity: 50%;
 	letter-spacing: 5px;
 	color:#FFF;
 }
@@ -288,13 +269,133 @@ html {
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 .home_div_3 {
-	background-image: url("images/mesures3.jpg");
+	background-image: url("images/mesure4.jpg");
 	background-repeat: no-repeat;
 	background-size: 100%;
 	width: 100%;
 	margin: 0;
 	padding: 0;
-	height: 750px;
+	height: 500px;
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+/* !!!!!!!!!! Home Div 4 !!!!!!!!!! */
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+.home_div_4 h1 {
+	font-family:'Helvetica Neue', sans-serif; 
+	text-transform: uppercase;
+	text-align: center;
+	color : #4f4f4f;
+	font-size: 250%;
+	letter-spacing: 3px;
+	margin: 0;
+	padding-top: 5%;
+	height: 200px;
+	background-color: #FFF;
+}
+
+.home_div_4 .column {
+  display: inline-flex;
+  justify-content: center;
+  width: 33%;
+  margin:0px;
+}
+
+.home_div_4 .column h2 {
+	font-family:'Helvetica Neue', sans-serif; 
+	text-transform: uppercase;
+	text-align: center;
+	color : #4f4f4f;
+	font-size: 300%;
+	letter-spacing: 3px;
+	margin: 0;
+	padding: 0;
+	height: 110px;
+	background-color: #FFF;
+}
+
+.home_div_4 .column h1 {
+	font-family:'Helvetica Neue', sans-serif; 
+	text-transform: uppercase;
+	text-align: center;
+	color : #4f4f4f;
+	font-size: 175%;
+	letter-spacing: 3px;
+	margin: 0;
+	height: 200px;
+	padding-bottom: 5%;
+	background-color: #FFF;
+}
+
+.home_div_4 .column .icone_home1 {
+	background-image: url("images/icone_cardiaque.png");
+	box-sizing: border-box;
+	background-repeat: no-repeat;
+	background-size: 30%;
+	width: 100%;
+	background-position: center;
+	padding: 0;
+	height: 200px;
+}
+
+
+.home_div_4 .column .icone_home2 {
+	background-image: url("images/icone_reflex.png");
+	box-sizing: border-box;
+	background-repeat: no-repeat;
+	background-size: 30%;
+	width: 100%;
+	background-position: center;
+	padding: 0;
+	height: 200px;
+}
+
+.home_div_4 .column .icone_home3 {
+	background-image: url("images/icone_auditif.png");
+	box-sizing: border-box;
+	background-repeat: no-repeat;
+	background-size: 30%;
+	width: 100%;
+	background-position: center;
+	padding: 0;
+	height: 200px;
+}
+
+.home_div_4 .column .icone_home1:hover{
+	background-image: url("images/icone_cardiaque_gris.png");
+	background-size: 35%;
+	transition-duration: 0.5s;
+	transition-property: 
+}
+.home_div_4 .column .icone_home2:hover{
+	background-image: url("images/icone_reflex_gris.png");
+	background-size: 35%;
+	transition-duration: 0.5s;
+}
+.home_div_4 .column .icone_home3:hover{
+	background-image: url("images/icone_auditif_gris.png");
+	background-size: 35%;
+	transition-duration: 0.5s;
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+/* !!!!!!!!!! Home Div 5 !!!!!!!!!! */
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+.home_div_5 {
+	background-image: url("images/histoire.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-attachment: local;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	height: 500px;
 }
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
@@ -306,6 +407,7 @@ html {
 .faq_div_1{
 	background-image: url("images/FAQ2.jpg");
 	background-attachment: fixed;
+	background-repeat: no-repeat;
 	background-color: #333;
 	background-size: 100%;
 	width: 100%;
@@ -488,7 +590,6 @@ input[type=text], select, textarea .champ {
 
 
 .form {
-
 	position: absolute;
 	left:30%;
 	top: 17%;
