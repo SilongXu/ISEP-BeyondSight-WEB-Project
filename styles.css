@@ -549,12 +549,10 @@ input[type=submit]:hover {
 .inscription_div_1{
 	background-image: url("images/inscription.jpg");
 	background-color: #333;
-	background-size: 100%;
-
 	background-repeat: no-repeat;
 	display:flex; 
 	width: 100%;
-	position: fixed;
+	background-attachment: scroll;
 	height: 750px;
 
 }
