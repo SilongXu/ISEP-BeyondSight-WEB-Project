@@ -33,12 +33,12 @@ html {
 }
 
 .menu_bar .left {
-	width: 30%;
+	width: 37%;
 	margin-left: 3%;
 }
 
 .menu_bar .center {
-    width: 50%;
+    width: 38%;
 }
 
 .menu_bar .right {
@@ -538,6 +538,67 @@ input[type=submit]:hover {
 	margin-top: 5px;
 }
 
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+/* !!!!!!!!!!! Connexion !!!!!! !!!! */
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+#bgConnexion{
+	display: flex;
+	background: url('images/incription_connexion.jpg');
+	width: 100%;height: 100%;
+	position: absolute;left: 0px;top: 0px;
+	
+}
+#h2Connexion{
+	position: absolute;
+	left: 45%;
+	top: 15%;
+    text-align: center;
+	justify-content: center;
+	color: white;
+	font-family: 'Helvetica Neue', sans-serif;
+	font-size: 2.2em;
+	font-weight: normal;
+	text-transform: uppercase;
+	display: flex;
+
+
+}
+.frameConnexion{
+	display: flex;
+	position: absolute;
+	left:40%;
+	top: 30%;
+	height: 300px;
+	border-radius: 20px;
+	width: 20%;
+	background-color: #DFE7EE;
+	padding: 30px;
+	justify-content: center;
+	text-align: center;
+	
+}
+
+.frameConnexion input[type=text], select ,textarea .champConnexion{
+	width: 70%;
+	
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+
+	text-align: center;
+	resize: vertical;
+	display: list-item;
+	margin-left: 15%;
+	
+}
+
+
+
+
 
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
@@ -571,7 +632,7 @@ input[type=submit]:hover {
 	display: flex;
 }
 
-input[type=text], select, textarea .champ {
+.form input[type=text], select, textarea .champ {
   width: 30%;
   padding: 12px;
   border: 1px solid #ccc;
