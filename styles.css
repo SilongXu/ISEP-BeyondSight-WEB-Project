@@ -8,6 +8,8 @@ html {
 	font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
+/*body{position: absolute; left:0px; top:0px; width: 100%;overflow-x: hidden;}*/
+
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 /* !!!!! Menu Bar Global !!!!! */
@@ -206,6 +208,7 @@ html {
 	margin: 0;
 	padding: 0;
 	height: 500px;
+	position: absolute;left: 0px;top: 0px;
 
 }
 
@@ -214,6 +217,10 @@ html {
 /* !!!!!!!!!! Home Div 2 !!!!!!!!!! */
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+.home_div_2{
+	position: relative;left: 0px;top: 500px;
+}
 
 .home_div_2 h1 {
 	font-family:'Helvetica Neue', sans-serif; 
@@ -273,9 +280,10 @@ html {
 	background-repeat: no-repeat;
 	background-size: 100%;
 	width: 100%;
-	margin: 0;
-	padding: 0;
+	box-sizing: border-box;
 	height: 500px;
+	position: relative;left: 0px;top: 500px;
+
 }
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
@@ -283,6 +291,10 @@ html {
 /* !!!!!!!!!! Home Div 4 !!!!!!!!!! */
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+.home_div_4{
+	position: relative;left: 0px;top: 500px;
+}
 
 .home_div_4 h1 {
 	font-family:'Helvetica Neue', sans-serif; 
@@ -396,6 +408,7 @@ html {
 	margin: 0;
 	padding: 0;
 	height: 500px;
+	position: relative;left: 0px;top: 500px;
 }
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
@@ -613,8 +626,9 @@ input[type=submit]:hover {
 	background-repeat: no-repeat;
 	display:flex; 
 	width: 100%;
-	background-attachment: scroll;
-	height: 750px;
+	/*background-attachment: scroll;*/
+	height: 100%;
+	position: absolute;left: 0px;top: 0px;
 
 }
 
