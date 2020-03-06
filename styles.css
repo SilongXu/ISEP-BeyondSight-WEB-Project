@@ -279,12 +279,13 @@ html {
 	background-image: url("images/mesure4.jpg");
 	background-repeat: no-repeat;
 	background-size: 100%;
-	width: 100%;
+	width: 102%;
 	box-sizing: border-box;
 	height: 500px;
-	position: relative;left: 0px;top: 500px;
+	position: relative;left: -10px;top: 500px;
+	}
 
-}
+
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
@@ -404,11 +405,11 @@ html {
 	background-repeat: no-repeat;
 	background-size: 100%;
 	background-attachment: local;
-	width: 100%;
+	width: 102%;
 	margin: 0;
 	padding: 0;
 	height: 500px;
-	position: relative;left: 0px;top: 500px;
+	position: relative;left: -10px;top: 500px;
 }
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
@@ -487,7 +488,7 @@ html {
 
 }
 
-body {font-family: Arial, Helvetica, sans-serif;}
+body {font-family: Arial, Helvetica, sans-serif;overflow-x:hidden;}
 * {box-sizing: border-box;}
 
 input[type=text], select, textarea {
