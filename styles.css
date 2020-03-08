@@ -198,7 +198,7 @@ html {
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 
-.home_div_1 {
+.accueil_div_1 {
 	background-image: url("images/voiture2.jpg");
 	box-sizing: border-box;
 	background-attachment: fixed;
@@ -214,15 +214,15 @@ html {
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
-/* !!!!!!!!!! Home Div 2 !!!!!!!!!! */
+/* !!!!!!!!!! accueil Div 2 !!!!!!!!!! */
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
-.home_div_2{
+.accueil_div_2{
 	position: relative;left: 0px;top: 500px;
 }
 
-.home_div_2 h1 {
+.accueil_div_2 h1 {
 	font-family:'Helvetica Neue', sans-serif; 
 	text-transform: uppercase;
 	text-align: center;
@@ -235,14 +235,14 @@ html {
 	background-color: #FFF;
 }
 
-.home_div_2 .column {
+.accueil_div_2 .column {
   display: inline-flex;
   justify-content: center;
   width: 33%;
   margin:0px;
 }
 
-.home_div_2 .column h2 {
+.accueil_div_2 .column h2 {
 	font-family:'Helvetica Neue', sans-serif; 
 	text-transform: uppercase;
 	text-align: center;
@@ -255,7 +255,7 @@ html {
 	background-color: #FFF;
 }
 
-.home_div_2 .column h1 {
+.accueil_div_2 .column h1 {
 	font-family:'Helvetica Neue', sans-serif; 
 	text-transform: uppercase;
 	text-align: center;
@@ -271,11 +271,11 @@ html {
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
-/* !!!!!!!!!! Home Div 3 !!!!!!!!!! */
+/* !!!!!!!!!! accueil Div 3 !!!!!!!!!! */
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
-.home_div_3 {
+.accueil_div_3 {
 	background-image: url("images/mesure4.jpg");
 	background-repeat: no-repeat;
 	background-size: 100%;
@@ -289,15 +289,15 @@ html {
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
-/* !!!!!!!!!! Home Div 4 !!!!!!!!!! */
+/* !!!!!!!!!! accueil Div 4 !!!!!!!!!! */
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
-.home_div_4{
+.accueil_div_4{
 	position: relative;left: 0px;top: 500px;
 }
 
-.home_div_4 h1 {
+.accueil_div_4 h1 {
 	font-family:'Helvetica Neue', sans-serif; 
 	text-transform: uppercase;
 	text-align: center;
@@ -310,14 +310,14 @@ html {
 	background-color: #FFF;
 }
 
-.home_div_4 .column {
+.accueil_div_4 .column {
   display: inline-flex;
   justify-content: center;
   width: 33%;
   margin:0px;
 }
 
-.home_div_4 .column h2 {
+.accueil_div_4 .column h2 {
 	font-family:'Helvetica Neue', sans-serif; 
 	text-transform: uppercase;
 	text-align: center;
@@ -330,7 +330,7 @@ html {
 	background-color: #FFF;
 }
 
-.home_div_4 .column h1 {
+.accueil_div_4 .column h1 {
 	font-family:'Helvetica Neue', sans-serif; 
 	text-transform: uppercase;
 	text-align: center;
@@ -343,7 +343,7 @@ html {
 	background-color: #FFF;
 }
 
-.home_div_4 .column .icone_home1 {
+.accueil_div_4 .column .icone_accueil1 {
 	background-image: url("images/icone_cardiaque.png");
 	box-sizing: border-box;
 	background-repeat: no-repeat;
@@ -355,7 +355,7 @@ html {
 }
 
 
-.home_div_4 .column .icone_home2 {
+.accueil_div_4 .column .icone_accueil2 {
 	background-image: url("images/icone_reflex.png");
 	box-sizing: border-box;
 	background-repeat: no-repeat;
@@ -366,7 +366,7 @@ html {
 	height: 200px;
 }
 
-.home_div_4 .column .icone_home3 {
+.accueil_div_4 .column .icone_accueil3 {
 	background-image: url("images/icone_auditif.png");
 	box-sizing: border-box;
 	background-repeat: no-repeat;
@@ -377,18 +377,18 @@ html {
 	height: 200px;
 }
 
-.home_div_4 .column .icone_home1:hover{
+.accueil_div_4 .column .icone_accueil1:hover{
 	background-image: url("images/icone_cardiaque_gris.png");
 	background-size: 35%;
 	transition-duration: 0.5s;
 	transition-property: 
 }
-.home_div_4 .column .icone_home2:hover{
+.accueil_div_4 .column .icone_accueil2:hover{
 	background-image: url("images/icone_reflex_gris.png");
 	background-size: 35%;
 	transition-duration: 0.5s;
 }
-.home_div_4 .column .icone_home3:hover{
+.accueil_div_4 .column .icone_accueil3:hover{
 	background-image: url("images/icone_auditif_gris.png");
 	background-size: 35%;
 	transition-duration: 0.5s;
@@ -396,11 +396,11 @@ html {
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
-/* !!!!!!!!!! Home Div 5 !!!!!!!!!! */
+/* !!!!!!!!!! accueil Div 5 !!!!!!!!!! */
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
-.home_div_5 {
+.accueil_div_5 {
 	background-image: url("images/histoire.jpg");
 	background-repeat: no-repeat;
 	background-size: 100%;
