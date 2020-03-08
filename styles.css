@@ -424,10 +424,11 @@ html {
 	background-repeat: no-repeat;
 	background-color: #333;
 	background-size: 100%;
-	width: 100%;
+	width: 102%;
 	margin: 0;
 	padding: 0;
 	height: 500px;
+	position: relative;left: -10px;top: 0px;
 }
 
 .faq_div_2,..faq_div_3, .faq_div_4, .faq_div_5, .faq_div_6{
@@ -469,10 +470,11 @@ html {
 	background-size: 100%;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
-	width: 100%;
+	width: 102%;
 	margin: 0;
 	padding: 0;
 	height: 500px;
+	position: relative;left: -10px;top: 0px;
 }
 
 
@@ -533,10 +535,11 @@ input[type=submit]:hover {
 	background-size: 100%;
 	background-position: center;
 	background-repeat: no-repeat;
-	width: 100%;
+	width: 102%;
 	margin: 0;
 	padding: 0;
 	height: 500px;
+	position: relative;left: -10px;top: 0px;
 }
 
 
