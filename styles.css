@@ -761,7 +761,7 @@ input[type=submit]:hover {
 	border-radius: 20px;
 	width: 40%;
 	background-color: #DFE7EE;
-	padding: 5px;
+	padding: 2%;
 	justify-content: center;
 	text-align: center;
 }
