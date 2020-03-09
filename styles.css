@@ -752,6 +752,20 @@ input[type=submit]:hover {
   margin-left: 20%;
 }
 
+.form input[type=password], select, textarea .champ {
+  width: 60%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 9px;
+  text-align: center;
+  resize: vertical;
+  display: list-item;
+  margin-left: 20%;
+}
+
 
 .form {
 	position: absolute;
