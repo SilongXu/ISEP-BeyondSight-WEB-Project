@@ -529,9 +529,11 @@ html {
 }
 
 
+
 .question{
 	text-align: center;
-	justify-content: center;
+	justify-content:left;
+	margin-left: 17%;
 	color: #2e484c;
 	font-family: 'Helvetica Neue', sans-serif;
 	font-size: 2.2em;
@@ -540,9 +542,14 @@ html {
 	display: flex;	
 }
 
+.question:after {
+	
+}
+
 .answer{
 	text-align: center;
-	justify-content: center;
+	justify-content: left;
+	margin-left: 17%;
 	color: #2e484c;
 	font-family: 'Helvetica Neue', sans-serif;
 	font-size: 1.0em;
