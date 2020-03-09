@@ -66,7 +66,7 @@ html {
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
-.menu_bar .left a, .center a, .right a {
+.menu_bar .center a, .right a {
 	display: block;
     color: #FFF;
     padding: 8px 16px 8px 16px;
@@ -78,7 +78,7 @@ html {
     			color 0.1s ease-out;
 }
 
-.menu_bar .left a:hover, .center a:hover, .right a:hover {
+.menu_bar .center a:hover, .right a:hover {
     background-color: #5F829B;
     color: white;
 }
@@ -86,14 +86,19 @@ html {
 .menu_bar img {
 	width: 30px;
 	border-radius: 50%;
-	transition: width 0.3s ease-out;
+	transform: rotate(0deg);
+	transition: transform 1s ease-out;
 	position: absolute;
 }
 
-.menu_bar img:hover {
-	width: 50px;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
-	position: absolute;
+.menu_bar .fleche {
+	width: 25px;
+	margin: 2px 5px;
+}
+
+.menu_bar .fleche:hover {
+	transform : rotate(360deg);
+	transition: transform 0.5s ease-out;
 }
 
 .menu_bar .active {
