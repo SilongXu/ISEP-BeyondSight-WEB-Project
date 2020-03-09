@@ -651,7 +651,7 @@ input[type=submit]:hover {
 }
 
 .form input[type=text], select, textarea .champ {
-  width: 30%;
+  width: 60%;
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -661,7 +661,7 @@ input[type=submit]:hover {
   text-align: center;
   resize: vertical;
   display: list-item;
-  margin-left: 35%;
+  margin-left: 20%;
 }
 
 
