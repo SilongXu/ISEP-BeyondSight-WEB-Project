@@ -532,8 +532,9 @@ html {
 
 .question{
 	text-align: center;
-	justify-content:left;
-	margin-left: 17%;
+	justify-content: center;
+	/*justify-content:left;
+	margin-left: 17%;*/
 	color: #2e484c;
 	font-family: 'Helvetica Neue', sans-serif;
 	font-size: 2.2em;
@@ -543,10 +544,16 @@ html {
 }
 
 .question:after {
-	
+	content: " ";
+	background: url("images/fleche.png") no-repeat 0 0;
+	background-size: 100%;
+	width: 50px;
+	height: 50px;
+	margin-left: 3%;
 }
 
 .answer{
+	display: flex;
 	text-align: center;
 	justify-content: left;
 	margin-left: 17%;
@@ -554,10 +561,14 @@ html {
 	font-family: 'Helvetica Neue', sans-serif;
 	font-size: 1.0em;
 	font-weight: normal;
-	display: flex;
 	height: 100px;
 }
-
+/*
+.question:hover .answer {
+	display: flex;
+	position: absolute;
+}
+*/
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 /* !!!!!!!! contact  Page 1 !!!!!!!! */
