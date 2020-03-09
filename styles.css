@@ -757,7 +757,7 @@ input[type=submit]:hover {
 	position: absolute;
 	left:30%;
 	top: 19%;
-	height: 80%;
+	height: 500px;
 	border-radius: 20px;
 	width: 40%;
 	background-color: #DFE7EE;
