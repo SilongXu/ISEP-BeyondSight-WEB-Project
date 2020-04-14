@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3308
--- Généré le :  mar. 14 avr. 2020 à 13:02
+-- Généré le :  mar. 14 avr. 2020 à 13:16
 -- Version du serveur :  8.0.18
 -- Version de PHP :  7.3.12
 
@@ -21,6 +21,8 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `beyondsight`
 --
+CREATE DATABASE IF NOT EXISTS `beyondsight` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
+USE `beyondsight`;
 
 -- --------------------------------------------------------
 
