@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3308
--- Généré le :  lun. 13 avr. 2020 à 12:21
+-- Généré le :  mar. 14 avr. 2020 à 13:02
 -- Version du serveur :  8.0.18
 -- Version de PHP :  7.3.12
 
@@ -21,8 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `beyondsight`
 --
-CREATE DATABASE IF NOT EXISTS `beyondsight` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
-USE `beyondsight`;
 
 -- --------------------------------------------------------
 
@@ -33,9 +31,9 @@ USE `beyondsight`;
 DROP TABLE IF EXISTS `categories`;
 CREATE TABLE IF NOT EXISTS `categories` (
   `idCatégories` int(11) NOT NULL AUTO_INCREMENT,
-  `sujet` varchar(45) NOT NULL,
+  `sujet` varchar(45) COLLATE utf8_bin NOT NULL,
   PRIMARY KEY (`idCatégories`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Déchargement des données de la table `categories`
@@ -56,10 +54,10 @@ CREATE TABLE IF NOT EXISTS `conversations` (
   `idUtilisateur` int(11) NOT NULL,
   `date` datetime NOT NULL,
   `idCategorie` int(11) NOT NULL,
-  `sujet` varchar(100) NOT NULL,
-  `texte` varchar(1000) NOT NULL,
+  `sujet` varchar(100) COLLATE utf8_bin NOT NULL,
+  `texte` varchar(1000) COLLATE utf8_bin NOT NULL,
   PRIMARY KEY (`idConversation`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Déchargement des données de la table `conversations`
@@ -79,11 +77,11 @@ CREATE TABLE IF NOT EXISTS `conversationsaverifier` (
   `idConversationsAVerifier` int(11) NOT NULL AUTO_INCREMENT,
   `idAuteur` int(11) NOT NULL,
   `idCategorie` int(11) NOT NULL,
-  `sujet` varchar(100) NOT NULL,
-  `texte` varchar(1000) NOT NULL,
+  `sujet` varchar(100) COLLATE utf8_bin NOT NULL,
+  `texte` varchar(1000) COLLATE utf8_bin NOT NULL,
   `date` datetime NOT NULL,
   PRIMARY KEY (`idConversationsAVerifier`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
 
@@ -96,10 +94,10 @@ CREATE TABLE IF NOT EXISTS `messages` (
   `idMessages` int(11) NOT NULL AUTO_INCREMENT,
   `idUtilisateur` int(11) NOT NULL,
   `idConversation` int(11) NOT NULL,
-  `texte` varchar(1000) NOT NULL,
+  `texte` varchar(1000) COLLATE utf8_bin NOT NULL,
   `date` datetime NOT NULL,
   PRIMARY KEY (`idMessages`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
 
@@ -110,11 +108,11 @@ CREATE TABLE IF NOT EXISTS `messages` (
 DROP TABLE IF EXISTS `messagesprives`;
 CREATE TABLE IF NOT EXISTS `messagesprives` (
   `idMessagesPrives` int(11) NOT NULL AUTO_INCREMENT,
-  `texte` varchar(1000) NOT NULL,
+  `texte` varchar(1000) COLLATE utf8_bin NOT NULL,
   `idAuteur` int(11) NOT NULL,
   `idDestinataire` int(11) NOT NULL,
   PRIMARY KEY (`idMessagesPrives`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
 
@@ -130,7 +128,7 @@ CREATE TABLE IF NOT EXISTS `resultats` (
   `date` datetime NOT NULL,
   `idUtilisateur` int(11) NOT NULL,
   PRIMARY KEY (`idResultats`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
 
@@ -141,9 +139,9 @@ CREATE TABLE IF NOT EXISTS `resultats` (
 DROP TABLE IF EXISTS `tests`;
 CREATE TABLE IF NOT EXISTS `tests` (
   `idTest` int(11) NOT NULL,
-  `capteur` varchar(45) NOT NULL,
-  `test` varchar(100) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `capteur` varchar(45) COLLATE utf8_bin NOT NULL,
+  `test` varchar(100) COLLATE utf8_bin NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
 
@@ -154,14 +152,14 @@ CREATE TABLE IF NOT EXISTS `tests` (
 DROP TABLE IF EXISTS `utilisateurs`;
 CREATE TABLE IF NOT EXISTS `utilisateurs` (
   `idUtilisateurs` int(11) NOT NULL AUTO_INCREMENT,
-  `nom` varchar(45) NOT NULL,
-  `prenom` varchar(45) NOT NULL,
-  `adresseMail` varchar(100) NOT NULL,
-  `role` varchar(45) NOT NULL,
-  `motDePasse` varchar(45) NOT NULL,
+  `nom` varchar(45) COLLATE utf8_bin NOT NULL,
+  `prenom` varchar(45) COLLATE utf8_bin NOT NULL,
+  `adresseMail` varchar(100) COLLATE utf8_bin NOT NULL,
+  `role` varchar(45) COLLATE utf8_bin NOT NULL,
+  `motDePasse` varchar(45) COLLATE utf8_bin NOT NULL,
   `numeroDeTelephone` int(11) NOT NULL,
   PRIMARY KEY (`idUtilisateurs`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Déchargement des données de la table `utilisateurs`
