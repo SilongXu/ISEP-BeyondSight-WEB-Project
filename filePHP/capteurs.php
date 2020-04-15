@@ -7,6 +7,24 @@
         <link rel="icon" href="images/favicon.ico" />
     </head>
 
+    <script>
+        function remove(idCap){
+              if (str.length == 0) {
+    document.getElementById("txtHint").innerHTML = "";
+    return;
+  } else {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("txtHint").innerHTML = this.responseText;
+      }
+    };
+            xmlhttp.open("GET", "removeCapteur.php?q=" + idCap, true);
+    xmlhttp.send();
+  }
+        }
+    </script>
+
     <body>
     	<!-- Menu Bar -->
     	<!--<div><img src="images/menu_icon.png" class = "icon_menu"></div>-->
@@ -66,10 +84,10 @@ $sql = "SELECT idTest, capteur, test FROM tests";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-    echo "<table><tr><th>ID</th><th>Capteur</th><th>Test</th></tr>";
+    echo "<table><tr><th>ID</th><th>Capteur</th><th>Test</th><th>Effacer</th></tr>";
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "<tr><td>".$row["idTest"]."</td><td>".$row["capteur"]."</td><td>".$row["test"]."</td></tr>";
+        echo "<tr><td>".$row["idTest"]."</td><td>".$row["capteur"]."</td><td>".$row["test"]."</td><td><button onclick='remove(".$row["idTest"].")'>Suppr</button></td></tr>";
     }
     echo "</table>";
 } else {
