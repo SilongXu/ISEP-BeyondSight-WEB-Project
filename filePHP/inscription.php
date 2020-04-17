@@ -1,52 +1,13 @@
 <!DOCTYPE html>
 <html>
     
-    <head>
-        <meta charset="utf-8" />
-        <link rel="stylesheet" href="styles.css" />
-        <title>Beyond Sight</title>
-        <link rel="icon" href="images/favicon.ico" />
-    </head>
+    <?php include "includes/header.php" ?>
 
     <body>
     	<!-- Menu Bar -->
-    	<!--<div><img src="images/menu_icon.png" class = "icon_menu"></div>-->
-    	<nav class = "menu_bar">
-    		<div class = "left">
-                <a href="accueil.html">
-                    <div><img src="images/logo_blanc_sans_fleche.png" class = "chrono"></div>
-                    <div><img src="images/logo_blanc_fleche2.png" class = "fleche"></div>
-                </a>
-			</div>
-			<div class = "center">
-                <div><a href="accueil.html">Accueil</a></div>
-                <div><a href="forum.html">Forum</a></div>
-                <div><a href="FAQ.html">FAQ</a></div>
-                <div><a href="contact.html">Contact</a></div>
-                
-            </div>
-			<div class = "right">
-				<div><a href="connexion.html">Connexion</a></div>
-				<div><a href="inscription.html" class = "active">Inscription</a></div>
-			</div>
-            <div class = "langues">
-                <span>Fr</span>
-                <div class = "not_choosen_language">
-                    <ul>
-                        <li><a href="">English</a></li>
-                        <li><a href="">Chinese</a></li>
-                    </ul>
-                </div>
-            </div>
-    	</nav>
-
+    	<?php include "includes/menubar.php" ?>
         <!-- Bouton Search-->
-        <div class = "search-box">
-            <input class="search-txt" type="text" name="" placeholder="Rechercher un utilisateur...">
-            <a class="search-btn" href="#">
-                <div><img src="images/loupe.png" class="loupe"></div>
-            </a>
-        </div>
+        <?php include "includes/searchbar.php" ?>
 
 
         <div class="inscription_div_1">
@@ -56,32 +17,76 @@
 
 
                 <div class = "form">
-                    <form action="/action_page.php">
+                    <form method = "post">
                         <label for="fname">Prénom</label>
-                        <input class="champ" type="text" id="fname" name="firstname" placeholder="Jean...">
+                        <input class="champ" type="text" name="prenom" id="prenom" placeholder="Jean..." required>
 
                         <label for="lname">Nom</label>
-                        <input class="champ" type="text" id="lname" name="lastname" placeholder="Dupont...">
+                        <input class="champ" type="text" name="nom" id="nom" placeholder="Dupont..." required>
 
                         <label for="lname">Téléphone</label>
-                        <input class="champ" type="text" id="" name="" placeholder="0601010101...">
+                        <input class="champ" type="text" name="tel" id="tel" placeholder="0601010101..." required>
 
                         <label for="lname">Email</label>
-                        <input class="champ" type="email" id="" name="" placeholder="monemail@gmail.com...">
+                        <input class="champ" type="email" name="email" id="email" placeholder="monemail@gmail.com..." required>
 
                         <label for="lname">Mot de passe</label>
-                        <input class="champ" type="password" id="" name="" placeholder="1234...">
+                        <input class="champ" type="password" name="password" id="password" placeholder="1234..." required>
 
                         <label for="lname">Confirmer votre mot de passe</label>
-                        <input class="champ" type="password" id="" name="" placeholder="1234...">
+                        <input class="champ" type="password" name="cpassword" id="cpassword" placeholder="1234..." required>
   
-                        <input type="submit" value="Envoyer">
+                        <input type="submit" name="formsend" id="formsend" value="Ok">
                     </form>
                 </div>
 
         </div>
 
 
+        <?php
+
+        	if (isset($_POST['formsend'])) {
+  				extract($_POST);
+
+  				if (!empty($password) && !empty($cpassword) && !empty($tel) && !empty($email) && !empty($nom) && !empty($prenom) && ($tel<=699999999)) {
+  					
+  					if ($password == $cpassword) {
+  						$options = ['cost' => 12,];
+  					}
+
+  					$hashpass = password_hash($password, PASSWORD_BCRYPT, $options);
+
+  					include 'includes/database.php';
+  					global $db;
+
+  					$c = $db->prepare("SELECT email FROM utilisateurs WHERE email = :email");
+  					$c->execute(['email' => $email]);
+  					$result = $c->rowCount();
+
+  					if ($result==0) {
+  						echo 'Votre compte a été créé';
+
+  						$q = $db->prepare("INSERT INTO utilisateurs(nom,prenom,email,password,tel,role) VALUES(:nom,:prenom,:email,:password,:tel,:role)"); //requete query
+  						$q->execute([
+  						'nom' => $nom,
+  						'prenom' => $prenom,
+  						'email' => $email,
+  						'tel' => $tel,
+  						'role' => 'Invité',
+  						'password' => $hashpass
+  						]);
+
+
+  					}else{
+  						echo 'Un email existe déjà';
+  					}
+  				}	
+  				else{
+  					echo "Les champs ne sont pas tous remplis";
+  				}
+
+        	}
+        ?>
 
     </body>
 </html>

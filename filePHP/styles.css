@@ -2,13 +2,13 @@
 html {
 	margin: 0;
 	padding: 0;
+	height: 100%;
 }
 
 * {
 	font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
-/*body{position: absolute; left:0px; top:0px; width: 100%;overflow-x: hidden;}*/
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
@@ -238,7 +238,7 @@ html {
 .bs_title {
 	font-family: "Helvetica Neue", sans-serif;
 	position: relative;
-	top: 55px;
+	top: 40px;
 	font-size: 4.2em;
 	text-transform: uppercase;
 	font-weight: bold;
@@ -251,8 +251,9 @@ html {
 	font-family: "Helvetica Neue", sans-serif;
 	font-style: italic;
 	position: relative;
-	top: 300;
 	opacity: 50%;
+	top: 0px;
+	opacity: 60%;
 	letter-spacing: 5px;
 	color:#FFF;
 }
@@ -285,68 +286,66 @@ html {
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 .accueil_div_12{
-	position: relative;left: 0px;top: 500px;
 	position: relative;
-	justify-content: middle;
+	left: 0%;
+	top: 500px;
+	
 }
 
+.accueil_div_12 .column {
+  display: inline-block;
+  justify-content: space-between;
+
+  width: 33%;
+  height: 270px;
+  margin-right: 0px;
+  font-family:'Helvetica Neue', sans-serif; 
+  color : #4f4f4f;
+  background-color: #FFF;
+}
+
+
 .accueil_div_12 h1 {
-	font-family:'Helvetica Neue', sans-serif; 
 	text-transform: uppercase;
 	text-align: center;
-	color : #4f4f4f;
 	font-size: 350%;
 	letter-spacing: 3px;
 	margin: 0;
 	padding-top: 5%;
 	height: 250px;
-	background-color: #FFF;
+	position: relative;
 }
 
-.accueil_div_12 .column {
-  display: inline-flex;
-  justify-content: center;
-  width: 33%;
-  height: 270px;
-  margin:0px;
-}
+
 
 .accueil_div_12 .column h2 {
-	font-family:'Helvetica Neue', sans-serif; 
 	text-transform: uppercase;
 	text-align: center;
-	color : #4f4f4f;
 	font-size: 250%;
 	letter-spacing: 3px;
-	margin: 0;
-	padding: 0;
-	height: 40px;
-	background-color: #FFF;
+	margin: 0px;
+	padding: 0px;
+	height: 200px;
 	position: absolute;
 	top: 45%;
 	z-index: 2;
 }
 
-.accueil_div_12 .column h1 {
-	font-family:'Helvetica Neue', sans-serif; 
-	text-transform: lowercase;
+.accueil_div_12 .column h3 { 
 	text-align: center;
-	color : #4f4f4f;
+	text-transform: lowercase;
 	font-size: 175%;
 	letter-spacing: 3px;
-	margin: 0;
+	margin: 0px;
 	height: 200px;
+	top: 100%;
+	padding: 5%;
 	padding-bottom: 5%;
-	background-color: #FFF;
 	position: absolute;
 	top: 50%;
-	z-index: 1;
+	z-index: 2;	
 }
 
-.accueil_div_12 .column:hover .accueil_div_12 h1, .accueil_div_12 h2{
-	background-color: blue;
-
-}
 
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
@@ -545,6 +544,60 @@ html {
 	position: relative;left: -10px;top: 500px;
 }
 
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+/* !!!!!!!!!! accueil Div 6 !!!!!!!!!! */
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+.accueil_div_6 h1 {
+	font-family:'Helvetica Neue', sans-serif; 
+	text-transform: uppercase;
+	text-align: center;
+	color : #4f4f4f;
+	top: 400px;
+	position: relative;
+	font-size: 350%;
+	letter-spacing: 3px;
+	margin: 0;
+	padding-top: 5%;
+	height: 250px;
+	background-color: #FFF;
+}
+
+.accueil_div_6 p{
+	position: relative;
+	top: 400px;
+	text-align: center;
+	justify-content: left;
+	color: #2e484c;
+	font-family: 'Helvetica Neue', sans-serif;
+	font-size: 1.0em;
+	font-weight: normal;
+	height: 200px;
+}
+
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+/* !!!!!!!!!!!! Footer !!!!!!!!!!! */
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+.main{
+  flex: 1 0 auto;
+}
+.footer{
+  flex-shrink: 0;
+  background: gray;
+}
+.footer h1{
+	font-size: 100%;
+}
+
+
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 /* !!!!!!!!!! FAQ  Page 1 !!!!!!!!!! */
@@ -560,8 +613,8 @@ html {
     width: 102%;
     margin: 0;
     padding: 0;
-    height: 500px;
-    position: relative;left: -10px;top: 0px;
+    height: 480px;
+    position: absolute;left: -10px;top: 0px;
 }
 
 .faq_div_2,..faq_div_3, .faq_div_4, .faq_div_5, .faq_div_6{
@@ -571,17 +624,16 @@ html {
 
 
 .question{
-    text-align: center;
-    justify-content: center;
-    /*justify-content:left;
-    margin-left: 17%;*/
-    color: #2e484c;
-    font-family: 'Helvetica Neue', sans-serif;
-    font-size: 2.2em;
-    font-weight: normal;
-    text-transform: uppercase;
-    display: flex;    
-    position: relative;
+	text-align: center;
+	justify-content: center;
+	color: #2e484c;
+	font-family: 'Helvetica Neue', sans-serif;
+	font-size: 1.8em;
+	font-weight: normal;
+	text-transform: uppercase;
+	display: flex;	
+	position: relative;
+	top: 480px;
 }
 
 .question:after {
@@ -596,22 +648,17 @@ html {
 
 
 .answer{
-    visibility: hidden;
-    position: relative;
-    text-align: center;
-    justify-content: left;
-    margin-left: 17%;
-    color: #2e484c;
-    font-family: 'Helvetica Neue', sans-serif;
-    font-size: 1.0em;
-    font-weight: normal;
-    height: 100px;
+	position: relative;
+	text-align: center;
+	justify-content: center;
+	color: #2e484c;
+	font-family: 'Helvetica Neue', sans-serif;
+	font-size: 1.0em;
+	font-weight: normal;
+	height: 100px;
+	top:490px;
 }
-/*
-.question:hover .answer {
-    display: flex;
-    position: absolute;
-}
+
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
@@ -645,7 +692,7 @@ html {
 
 }
 
-body {font-family: Arial, Helvetica, sans-serif;overflow-x:hidden;}
+body {font-family: Arial, Helvetica,sans-serif;overflow-x:hidden;height: 100%;margin:0;padding: 0;display: flex;flex-direction: column;}
 * {box-sizing: border-box;}
 
 input[type=text], select, textarea {
@@ -748,11 +795,11 @@ input[type=submit]:hover {
 }
 #h2Connexion{
 	position: absolute;
-	left: 45%;
+	left: 42%;
 	top: 15%;
     text-align: center;
 	justify-content: center;
-	color: white;
+	color: #2e484c;
 	font-family: 'Helvetica Neue', sans-serif;
 	font-size: 2.2em;
 	font-weight: normal;
@@ -766,45 +813,52 @@ input[type=submit]:hover {
 	position: absolute;
 	left:40%;
 	top: 30%;
-	height: 300px;
+	height: 270px;
 	border-radius: 20px;
 	width: 20%;
 	background-color: #DFE7EE;
 	padding: 30px;
-	justify-content: center;
+	justify-content: left;
 	text-align: center;
 	
 }
 
-.frameConnexion input[type=text], select ,textarea .champConnexion{
-	width: 70%;
+
+
+.frameConnexion input[type=email]{
+	width: 100%;
+
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin-top: 5%;
+	text-align: left;
+	resize: vertical;
+	display: list-item;
+	margin-left: 0%;
+	font-family: "Helvetica Neue", Arial, sans-serif;
 	
+}
+
+.frameConnexion input[type=password]{
+	width: 100%;
+	margin-top: 5%;
 	border: 1px solid #ccc;
 	border-radius: 4px;
 	box-sizing: border-box;
 
-	text-align: center;
+	text-align: left;
 	resize: vertical;
-	display: list-item;
-	margin-left: 15%;
+	display: list-item inline;
+	margin-left: 0%;
+	font-family: "Helvetica Neue", Arial, sans-serif;
 	
 }
 
-.frameConnexion input[type=password], select ,textarea .champConnexion{
-	width: 70%;
-	
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	box-sizing: border-box;
+.frameConnexion input[type=submit]{
+	margin-top: 5%;
 
-	text-align: center;
-	resize: vertical;
-	display: list-item;
-	margin-left: 15%;
-	
 }
-
-
 
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
@@ -847,7 +901,7 @@ input[type=submit]:hover {
   box-sizing: border-box;
   margin-top: 6px;
   margin-bottom: 9px;
-  text-align: center;
+  text-align: left;
   resize: vertical;
   display: list-item;
   margin-left: 20%;
@@ -861,7 +915,7 @@ input[type=submit]:hover {
   box-sizing: border-box;
   margin-top: 6px;
   margin-bottom: 9px;
-  text-align: center;
+  text-align: left;
   resize: vertical;
   display: list-item;
   margin-left: 20%;
@@ -875,7 +929,7 @@ input[type=submit]:hover {
   box-sizing: border-box;
   margin-top: 6px;
   margin-bottom: 9px;
-  text-align: center;
+  text-align: left;
   resize: vertical;
   display: list-item;
   margin-left: 20%;
@@ -912,6 +966,7 @@ input[type=submit]:hover {
 	border-radius: 10px;
 
 }
+
 
 
 
