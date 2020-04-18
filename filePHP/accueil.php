@@ -14,24 +14,30 @@
         	<!-- accueil Page 1 -->
         	<div class = "accueil_div_1">
     	    	<h1 class = "bs_title">InfiniteMeasures</h1>
-    	    	<h2 class = "bs_subtitle">MakesMeasuresGreatAgain</h2>
+    	    	<h2 class = "bs_subtitle">Experts en mesures</h2>
         	</div>
 
 
             <!-- accueil Page 1.2 -->
             <div class="accueil_div_12">
                 <h1>Notre produit</h1>
-                <div id="case_1" class="column">
+                <div class="column">
                     <h2 >Un boîtier</h2>
+                </div>
+                <div class="column">
+                    <h2>Une plateforme</h2>
+                </div>
+                <div class="column">
+                    <h2>Des tests </h2>
+                </div>
+                <div class="column">
                     <h3>révolutionnaire</h3>
                 </div>
-                <div id="case_2" class="column">
-                    <h2>Des tests </h2>
-                    <h3>scientifiquement approuvés</h3>
-                </div>
-                <div id="case_3" class="column">
-                    <h2>Une plateforme </h2>
+                <div class="column">
                     <h3>simple et ludique</h3>
+                </div>
+                <div class="column">
+                    <h3>scientifiquement approuvés</h3>
                 </div>
             </div>
 
@@ -89,7 +95,7 @@
 
             <div class = "accueil_div_6">
                 <h1>Notre histoire</h1>
-                <p>Equipe d'ingénieurs de l'ISEP...</p>
+                <p>Une équipe d'ingénieurs formée dans l'une des meilleures écoles du numérique : l'ISEP, ayant à coeur les projets touchant au médical et spécialisée dans les appareils de mesures.</p>
             </div>
 
         </div>
