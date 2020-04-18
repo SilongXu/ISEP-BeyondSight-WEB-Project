@@ -1,7 +1,7 @@
 <?php
 	
 
-	define('HOST', 'localhost:3306');
+	define('HOST', 'localhost:3308');
 	define('DB_NAME', 'beyondsight');
 	define('USER', 'root');
 	define('PASS', '');

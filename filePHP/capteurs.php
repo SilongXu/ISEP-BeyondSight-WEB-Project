@@ -8,28 +8,13 @@
     </head>
 
     <script>
-        function removeCap(idCap){
-              if (str.length == 0) {
-    document.getElementById("txtHint").innerHTML = "";
-    return;
-  } else {
-        if (window.XMLHttpRequest) {
-            // code for IE7+, Firefox, Chrome, Opera, Safari
-            xmlhttp = new XMLHttpRequest();
-        } else {
-            // code for IE6, IE5
-            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-        }
-        xmlhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("txtHint").innerHTML = this.responseText;
-            }
-        };
-            xmlhttp.open("DELETE", "removeCapteur.php?q=" + idCap, true);
-    xmlhttp.send();
-  }
+   function delproduct(id){
+        var msg = confirm("Are you sure you want to delete this product?");
 
-        }
+    if (msg) {
+        window.location = "capteurs.php?did="+id;
+    }
+    }
     </script>
 
     <body>
@@ -75,6 +60,7 @@
 
         <div id=tableauCapteur>
     	<?php
+
 $servername = "localhost:3308";
 $username = "root";
 $password = "";
@@ -86,7 +72,9 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-
+                if($_GET['did']){
+            $conn->query("delete from tests where idTest=".$_GET[did]);
+        }
 $sql = "SELECT idTest, capteur, test FROM tests";
 $result = $conn->query($sql);
 
@@ -95,7 +83,7 @@ if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
         $q=$row["idTest"];
-        echo "<tr><td>".$row["idTest"]."</td><td>".$row["capteur"]."</td><td>".$row["test"]."</td><td><button onclick='removeCap(".$q.")'>Suppr</button></td></tr>";
+        echo "<tr><td>".$row["idTest"]."</td><td>".$row["capteur"]."</td><td>".$row["test"]."</td><td><a href=\"javascript:delproduct(id=".$row["idTest"].")\">Delete</a></tr>";
     }
     echo "</table>";
 } else {

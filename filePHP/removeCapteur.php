@@ -11,7 +11,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 $q = ($_REQUEST["q"]);
-$sql = "DELETE FROM tests";
+$sql = "DELETE FROM tests WHERE ";
 if ($conn->query($sql) === TRUE) {
     echo "Record deleted successfully";
 } else {
