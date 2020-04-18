@@ -1031,5 +1031,10 @@ input[type=submit]:hover {
   }
 
 
-
+.tableauCapteur{
+	position: absolute;
+	left: 25%;top: 25%;
+	width: 400px;height: 250px;
+	border-radius: 5px;
+}
 
