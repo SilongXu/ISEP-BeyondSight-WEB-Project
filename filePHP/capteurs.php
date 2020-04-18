@@ -13,15 +13,22 @@
     document.getElementById("txtHint").innerHTML = "";
     return;
   } else {
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        document.getElementById("txtHint").innerHTML = this.responseText;
-      }
-    };
-            xmlhttp.open("GET", "removeCapteur.php?q=" + idCap, true);
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("txtHint").innerHTML = this.responseText;
+            }
+        };
+            xmlhttp.open("DELETE", "removeCapteur.php?q=" + idCap, true);
     xmlhttp.send();
   }
+
         }
     </script>
 
@@ -66,7 +73,7 @@
             </a>
         </div>
 
-        <div>
+        <div id=tableauCapteur>
     	<?php
 $servername = "localhost:3308";
 $username = "root";
@@ -87,7 +94,8 @@ if ($result->num_rows > 0) {
     echo "<table><tr><th>ID</th><th>Capteur</th><th>Test</th><th>Effacer</th></tr>";
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "<tr><td>".$row["idTest"]."</td><td>".$row["capteur"]."</td><td>".$row["test"]."</td><td><button onclick='remove(".$row["idTest"].")'>Suppr</button></td></tr>";
+        $q=$row["idTest"];
+        echo "<tr><td>".$row["idTest"]."</td><td>".$row["capteur"]."</td><td>".$row["test"]."</td><td><button onclick='remove(".$q.")'>Suppr</button></td></tr>";
     }
     echo "</table>";
 } else {
