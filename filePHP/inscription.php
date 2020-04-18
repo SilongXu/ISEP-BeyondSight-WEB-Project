@@ -17,8 +17,13 @@
 
 
                 <div class = "form">
+<<<<<<< HEAD
                     <form method = "post">
                         <label for="prenom">Prénom</label>
+=======
+                    <form method = "post" action="accueil.php">
+                        <label for="fname">Prénom</label>
+>>>>>>> master
                         <input class="champ" type="text" name="prenom" id="prenom" placeholder="Jean..." required>
 
                         <label for="nom">Nom</label>
@@ -54,6 +59,49 @@
                 }
         ?>
 
+<<<<<<< HEAD
+=======
+
+        	if (isset($_POST['formsend'])) {
+  				extract($_POST);
+
+  				if (!empty($password) && !empty($cpassword) && !empty($tel) && !empty($email) && !empty($nom) && !empty($prenom) && ($tel<=699999999)) {
+  					
+  					if ($password == $cpassword) {
+  						$options = ['cost' => 12,];
+  					}
+
+  					$hashpass = password_hash($password, PASSWORD_BCRYPT, $options);
+
+  					include 'includes/database.php';
+  					global $db;
+
+  					$c = $db->prepare("SELECT email FROM utilisateurs WHERE email = :email");
+  					$c->execute(['email' => $email]);
+  					$result = $c->rowCount();
+
+  					if ($result==0) {
+  						echo 'Votre compte a été créé';
+
+  						$q = $db->prepare("INSERT INTO utilisateurs(nom,prenom,email,password,tel,role) VALUES(:nom,:prenom,:email,:password,:tel,:role)"); //requete query
+  						$q->execute([
+  						'nom' => $nom,
+  						'prenom' => $prenom,
+  						'email' => $email,
+  						'tel' => $tel,
+  						'role' => 'Invité',
+  						'password' => $hashpass
+  						]);
+
+
+  					}else{
+  						echo 'Un email existe déjà';
+  					}
+  				}	
+  				else{
+  					echo "Les champs ne sont pas tous remplis";
+  				}
+>>>>>>> master
 
         
 

@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
     
     global $db;
     if(isset($_POST['formsend'])){
@@ -11,11 +12,25 @@
                 
 
                 $c = $db->prepare("SELECT adresseMail FROM utilisateurs WHERE adresseMail = :email");
+=======
+    session_start();
+    if(isset($_POST['formsend'])){
+        extract($_POST);
+
+        if(!empty($prenom) && !empty($nom) $$ !empty($tel) && !empty($email) &&!empty($password) && !empty($cpassword) && ($tel<=699999999)){
+            if($cpassword==$password){
+                $options =['cost' => 12,];
+                $hashpass =password_hash($motDePasse,PASSWORD_BCRYPT,$options);
+                global $db;
+
+                $c = $db->prepare("SELECT email FROM utilisateurs WHERE email = :email");
+>>>>>>> master
   				$c->execute(['email' => $email]);
                 $result = $c->rowCount();
                   
                 if(result==0){
                     
+<<<<<<< HEAD
                     $q=$db->prepare("INSERT INTO utilisateurs(prenom,nom,adresseMail,motDePasse,numeroDeTelephone) VALUES(:prenom,:nom,:adresseMail,:motDePasse,:numeroDeTelephone)");
                     $q->execute([
                     'prenom'=>$prenom,
@@ -24,6 +39,15 @@
                     
                     'motDePasse'=>$password,
                     'numeroDeTelephone'=>$tel
+=======
+                    $q=$db->prepare("INSERT INTO utilisateurs(prenom,nom,adressMail,motDePasse,numeroDeTelephone) VALUES(:prenom,:nom,:adressMail,:motDePasse,:numeroDeTelephone)");
+                    $q->execute([
+                    'prenom'=>$prenom,
+                    'nom'=>$nom,
+                    'adressMail'=>$email,
+                    'motDePasse'=>$password,
+                    'numeroDeTelephone'=>$tel;
+>>>>>>> master
                     ]);
                     $_SESSION['signIn']=$email;
 

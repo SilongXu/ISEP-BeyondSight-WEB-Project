@@ -15,7 +15,11 @@
                 $result = $c->rowCount();
 
                 if($result==0){
+<<<<<<< HEAD
                     $q=$db->prepare("UPDATE utilisateurs SET nom='$lastname',prenom='$firstname',adresseMail='$email',motDePasse='$motDePasse',numeroDeTelephone='$telephone', WHERE adresseMail='$_SESSION['email']'");
+=======
+                    $q=$db->prepare("UPDATE utilisateurs SET nom=".$lastname.",prenom=".$firstname.",adresseMail=".$email.",motDePasse=".$motDePasse.",numeroDeTelephone=".$telephone.", WHERE adresseMail=".$_SESSION['email']);
+>>>>>>> master
                     $q->execute();
                     $_SESSION['email']=$email;
                     $_SESSION['Edit']=$email;

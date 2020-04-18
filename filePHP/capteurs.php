@@ -8,6 +8,7 @@
     </head>
 
     <script>
+<<<<<<< HEAD
         function remove(idCap){
               if (str.length == 0) {
     document.getElementById("txtHint").innerHTML = "";
@@ -23,6 +24,15 @@
     xmlhttp.send();
   }
         }
+=======
+   function delproduct(id){
+        var msg = confirm("Are you sure you want to delete this product?");
+
+    if (msg) {
+        window.location = "capteurs.php?did="+id;
+    }
+    }
+>>>>>>> master
     </script>
 
     <body>
@@ -66,8 +76,14 @@
             </a>
         </div>
 
+<<<<<<< HEAD
         <div>
     	<?php
+=======
+        <div class="tableauCapteur">
+    	<?php
+
+>>>>>>> master
 $servername = "localhost:3308";
 $username = "root";
 $password = "";
@@ -79,7 +95,9 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-
+                if($_GET['did']!=""){
+            $conn->query("delete from tests where idTest=".$_GET["did"]);
+        }
 $sql = "SELECT idTest, capteur, test FROM tests";
 $result = $conn->query($sql);
 
@@ -87,7 +105,12 @@ if ($result->num_rows > 0) {
     echo "<table><tr><th>ID</th><th>Capteur</th><th>Test</th><th>Effacer</th></tr>";
     // output data of each row
     while($row = $result->fetch_assoc()) {
+<<<<<<< HEAD
         echo "<tr><td>".$row["idTest"]."</td><td>".$row["capteur"]."</td><td>".$row["test"]."</td><td><button onclick='remove(".$row["idTest"].")'>Suppr</button></td></tr>";
+=======
+        $q=$row["idTest"];
+        echo "<tr><td>".$row["idTest"]."</td><td>".$row["capteur"]."</td><td>".$row["test"]."</td><td><a href=\"javascript:delproduct(id=".$row["idTest"].")\">Delete</a></tr>";
+>>>>>>> master
     }
     echo "</table>";
 } else {

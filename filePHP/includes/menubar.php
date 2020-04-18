@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 <?php session_start();
     error_reporting(0);
 ?>
+=======
+<?php session_start();?>
+>>>>>>> master
 <!DOCTYPE html>
 <html>
 
