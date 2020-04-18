@@ -1,4 +1,4 @@
-
+<?php session_start();?>
 <!DOCTYPE html>
 <html>
 
@@ -17,10 +17,27 @@
             <div><a href="contact.php">Contact</a></div>        
         </div>
 
-        <div class = "right">
-            <div><a href="connexion.php">Connexion</a></div>
-            <div><a href="inscription.php" class = "active">Inscription</a></div>
-        </div>
+        <?php
+                
+                if(!isset($_SESSION['email'])){
+                ?>
+
+                    <div class = "right">
+				        <div><a href="connexion.php" >Connexion</a></div>
+				        <div><a href="inscription.php" >Inscription</a></div>
+			        </div>
+
+                <?php
+                }elseif(isset($_SESSION['email'])){
+                ?>
+                <div class = "right">
+				    <div><a href="ComptePrive.php" >Profil</a></div>
+                    <div><a href="accueil.php" >Se Déconnecter</a></div>
+                </div>
+                <?php
+                }
+        ?>
+
         <div class = "langues">
             <span>Fr</span>
             <div class = "not_choosen_language">

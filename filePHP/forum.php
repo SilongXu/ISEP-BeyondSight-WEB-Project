@@ -1,12 +1,22 @@
+
 <!DOCTYPE html>
 <html>
     <?php include "includes/header.php" ?>
 
     <body>
+<<<<<<< Updated upstream
         <!-- Menu Bar -->
         <?php include "includes/menubar.php" ?>
         <!-- Bouton Search-->
         <?php include "includes/searchbar.php" ?>
+=======
+    	<!-- Menu Bar -->
+        <?php include "includes/menubar.php" ?>
+        <!-- Bouton Search-->
+        <?php include "includes/searchbar.php" ?>
+
+
+>>>>>>> Stashed changes
 
 
     	<!-- Forum Page 1 -->

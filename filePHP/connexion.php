@@ -1,3 +1,4 @@
+<?php  include "includes/database.php"?>
 <!DOCTYPE html>
 <html>
     
@@ -17,7 +18,7 @@
         </div>
 
         <div class="frameConnexion">
-            <form metod="">
+            <form metod="POST" action="includes/login.php">
                 <label for="lname">Email</label>
                 <input class="champ" type="email" name="loginEmail" id="email" placeholder="monemail@gmail.com..." required>
 
@@ -28,42 +29,12 @@
             </form>
         </div>
 
-        <?php 
+        <?php  include "includes/login.php" ?>
 
-        include 'includes/database.php';
-        global $db;
-
-        if(isset($_POST['formlogin'])){
-            extract($_POST);
-            if (!empty($loginEmail) && !empty($loginPassword)) {
-               
-               $q = $db->prepare("SELECT * FROM utilisateurs WHERE email= :email");
-               $q->execute(['email' => $loginEmail]);
-               $result = $q->fetch();
-
-               if ($result == true) {
-                   // le compte existe
-                $hashpassword = $result['password'];
-                if (password_verify($loginPassword, $hashpassword)) {
-                    echo "Connexion en cours";
-
-                }
-                else{
-                    echo "Le mot de passe n'est pas correct";
-                }
-
-
-               }
-               else{
-                echo "Le compte portant l'email ". $loginEmail . "n'existe pas";
-
-               }
+        <?php
+            if(isset($_SESSION['email'])){
+                header("Refresh:3;url=ComptePrive.php");
             }
-            else {
-                echo "Veuillez compléter l'ensemble des champs";
-            }
-        }
-
         ?>
 
     </body>
