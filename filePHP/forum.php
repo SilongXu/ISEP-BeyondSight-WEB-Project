@@ -1,12 +1,15 @@
+
 <!DOCTYPE html>
 <html>
     <?php include "includes/header.php" ?>
 
     <body>
-        <!-- Menu Bar -->
+    	<!-- Menu Bar -->
         <?php include "includes/menubar.php" ?>
         <!-- Bouton Search-->
         <?php include "includes/searchbar.php" ?>
+
+
 
 
     	<!-- Forum Page 1 -->

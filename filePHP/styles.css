@@ -286,44 +286,64 @@ html {
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 .accueil_div_12{
-	position: relative;left: 0px;top: 500px;
+	position: relative;
+	left: 0%;
+	top: 500px;
+	
 }
 
+.accueil_div_12 .column {
+  display: inline-block;
+  justify-content: space-between;
+
+  width: 33%;
+  height: 270px;
+  margin-right: 0px;
+  font-family:'Helvetica Neue', sans-serif; 
+  color : #4f4f4f;
+  background-color: #FFF;
+}
+
+
 .accueil_div_12 h1 {
-	font-family:'Helvetica Neue', sans-serif; 
 	text-transform: uppercase;
 	text-align: center;
-	color : #4f4f4f;
 	font-size: 350%;
 	letter-spacing: 3px;
 	margin: 0;
 	padding-top: 5%;
-	height: 200px;
-	background-color: #FFF;
+	height: 250px;
+	position: relative;
 }
 
-.accueil_div_12 .column {
-  display: inline-flex;
-  justify-content: center;
-  width: 33%;
-  margin:0px;
-}
 
-.accueil_div_12 .column h2, h3 {
-	font-family:'Helvetica Neue', sans-serif; 
+
+.accueil_div_12 .column h2 {
 	text-transform: uppercase;
 	text-align: center;
-	color : #4f4f4f;
+	font-size: 250%;
 	letter-spacing: 3px;
-	margin: 0;
-	padding: 0;
-	height: 100px;
-	background-color: #FFF;
+	margin: 0px;
+	padding: 0px;
+	height: 200px;
+	position: absolute;
+	top: 45%;
+	z-index: 2;
 }
 
-.accueil_div_12 .column h2{
-	font-size: 250%; 
-	margin-top: 60px;
+.accueil_div_12 .column h3 { 
+	text-align: center;
+	text-transform: lowercase;
+	font-size: 175%;
+	letter-spacing: 3px;
+	margin: 0px;
+	height: 200px;
+	top: 100%;
+	padding: 5%;
+	padding-bottom: 5%;
+	position: absolute;
+	top: 50%;
+	z-index: 2;	
 }
 
 
@@ -613,7 +633,7 @@ html {
 	text-transform: uppercase;
 	display: flex;	
 	position: relative;
-	top: 500px;
+	top: 480px;
 }
 
 .question:after {
@@ -623,7 +643,6 @@ html {
     width: 50px;
     height: 50px;
     margin-left: 3%;
-
 }
 
 
@@ -633,15 +652,11 @@ html {
 	text-align: center;
 	justify-content: center;
 	color: #2e484c;
-	margin-left: 15%;
 	font-family: 'Helvetica Neue', sans-serif;
 	font-size: 1.0em;
 	font-weight: normal;
 	height: 100px;
-	width: 70%;
 	top:490px;
-	text-transform: none;
-	letter-spacing: 0px;
 }
 
 
@@ -936,21 +951,99 @@ input[type=submit]:hover {
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
-/* !!!!!!!!!!!! Resultat !!!!!!!!!!! */
+/* !!!!!!!!!!!!Compte prive!!!!!!!!! */
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
-#resultatDeTest {
-	width: 55%;height: 80%;
+.partieInfoPrive{
 	display: flex;
 	position: absolute;
-	left: 22.5%;
-	top: 13%;
-	background-color: #DFE7EE;
-	overflow: auto;
-	border-radius: 10px;
-
+	left: 25%;top: 25%;
+	width: 400px;height: 250px;
+	background-color: red;
+	border-radius: 5px;
 }
+
+.partieEditInfoPrive{
+	display: flex;
+	position: absolute;
+	width: 400px;height: 250px;
+	background-color: red;
+	border-radius: 5px;
+	left: 25%;top:60%;
+}
+
+.partieInfoResultat{
+	display: flex;
+	position: absolute;
+	width: 400px;height: 250px;
+	background-color: red;
+	border-radius: 5px;
+	right: 25%;top: 25%;
+}
+.partieInfoTest{
+	display: flex;
+	position: absolute;
+	width: 400px;height:250px;
+	background-color: red;
+	border-radius: 5px;
+	right: 25%;top: 60%;
+}
+.partieInfoPrive a, .partieEditInfoPrive a,.partieInfoResultat a,.partieInfoTest a{
+	
+	display: block;
+	width: 400px;
+	text-decoration: none;
+	text-align: center;
+	transition: background-color 0.3s ease-out,
+	color 0.1s ease-out;
+	border-radius: 5px;
+}
+
+.partieInfoPrive a:hover, .partieEditInfoPrive a:hover,.partieInfoResultat a:hover,.partieInfoTest a:hover{
+	background-color: #5F829B; 
+    color: white;
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+/* !!!!!!!!!!!!Compte prive!!!!!!!!! */
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+.partieDeDonnee{
+	width: 1000px;height: 550px;
+	background-color: red;
+	display: flex;
+	position: absolute;
+	left: 25%;
+	top: 25%;
+	border-radius: 5px;
+}
+.partieEditInformation{
+	width: 550px;height: 650px;
+	background-color: red;
+	display: flex;
+	position: absolute;
+	left: 35%;
+	top: 20%;
+	border-radius: 5px;
+}
+
+.form .champEdit {
+	position: absolute;
+	width: 40%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin-top: 6px;
+	margin-bottom: 9px;
+	text-align: center;
+	resize: vertical;
+	display: list-item;
+	margin-left: 20%;
+  }
 
 
 

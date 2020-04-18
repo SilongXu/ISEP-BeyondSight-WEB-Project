@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
     <?php include "includes/header.php" ?>
@@ -19,19 +20,19 @@
         </div>
         <div class = "faq_div_3">
             <h3 class = "question">Comment modifier mes informations personnelles ?<h3/>
-            <p class = "answer">Pour modifier vos informations personelles rendez-vous dans la catégorie "Profil" une fois <a href="connexion.php">connecté<a> !<p/>
+            <p class = "answer">blabla<p/>
         </div>
         <div class = "faq_div_4">
             <h3 class = "question">Mes informations personnelles sont-elles visibles par tous ?<h3/>
-            <p class = "answer">Vos informations confidentielles tel que votre adresse e-mail ou votre numéro de téléphone ne sont pas visible par tous. Cependant, les scores obtenus aux test sont visbiles par les autres utilisateurs.<p/>
+            <p class = "answer">blabla<p/>
         </div> 
         <div class = "faq_div_5">
             <h3 class = "question">Puis-je repasser un test ?<h3/>
-            <p class = "answer">Oui, vous pouvez repasser un test. Pour cela veuillez contacter votre gestionnaire.<p/>
+            <p class = "answer">blabla<p/>
         </div>
         <div class = "faq_div_6">
             <h3 class = "question">Comment traitons-nous vos données ?<h3/>
-            <p class = "answer">Nous utilisons vos donées dans un cadre privé uniquement.<p/>
+            <p class = "answer">blabla<p/>
         </div> 
 
 
