@@ -15,20 +15,20 @@
         <div id="bgConnexion"></div>
 
         
-        <div class="partieInfoPrive">
-            <a href="InfoPrive.php">Information Privé</a>
+        <div class="InformationUsers">
+            <a class ="link" href="InfoPrive.php">Information des utilisateurs</a>
         </div>
                     
-        <div class="partieEditInfoPrive">
-            <a href="EditInfoPrive.php">Editer Information Privé</a>
+        <div class="EditProfile">
+            <a class ="link" href="editprofil.php">Editer mon profil</a>
         </div>
 
-        <div class="partieInfoResultat">
-            <a href="InfoResultat.php">Information des Résultats</a>
+        <div class="InfoResultat">
+            <a class ="link" href="InfoResultat.php">Résultats des tests</a>
          </div>
 
-         <div class="partieInfoTest">
-             <a href="InfoTest.php">Information des tests</a>
+         <div class="InfoTests">
+             <a class ="link" href="capteurs.php?did=">Gérer les tests</a>
          </div>
 
 

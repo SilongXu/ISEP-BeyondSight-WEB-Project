@@ -286,64 +286,63 @@ html {
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 .accueil_div_12{
-	position: relative;
-	left: 0%;
-	top: 500px;
-	
+	position: relative;left: 0px;top: 500px;
 }
-
-.accueil_div_12 .column {
-  display: inline-block;
-  justify-content: space-between;
-
-  width: 33%;
-  height: 270px;
-  margin-right: 0px;
-  font-family:'Helvetica Neue', sans-serif; 
-  color : #4f4f4f;
-  background-color: #FFF;
-}
-
 
 .accueil_div_12 h1 {
+	font-family:'Helvetica Neue', sans-serif; 
 	text-transform: uppercase;
 	text-align: center;
+	color : #4f4f4f;
 	font-size: 350%;
 	letter-spacing: 3px;
 	margin: 0;
 	padding-top: 5%;
-	height: 250px;
-	position: relative;
+	height: 200px;
+	background-color: #FFF;
 }
 
-
-
-.accueil_div_12 .column h2 {
+.accueil_div_12 .column h1 {
+	font-family:'Helvetica Neue', sans-serif; 
 	text-transform: uppercase;
 	text-align: center;
-	font-size: 250%;
-	letter-spacing: 3px;
-	margin: 0px;
-	padding: 0px;
-	height: 200px;
-	position: absolute;
-	top: 45%;
-	z-index: 2;
-}
-
-.accueil_div_12 .column h3 { 
-	text-align: center;
-	text-transform: lowercase;
+	color : #4f4f4f;
 	font-size: 175%;
 	letter-spacing: 3px;
-	margin: 0px;
-	height: 200px;
-	top: 100%;
-	padding: 5%;
+	margin: 0;
+	height: 150px;
 	padding-bottom: 5%;
-	position: absolute;
-	top: 50%;
-	z-index: 2;	
+	background-color: #FFF;
+}
+
+.accueil_div_12 .column {
+  display: inline-flex;
+  justify-content: center;
+  width: 33%;
+  margin:0px;
+}
+
+.accueil_div_12 .column h2 {
+	font-family:'Helvetica Neue', sans-serif; 
+	text-transform: uppercase;
+	text-align: center;
+	color : #4f4f4f;
+	font-size: 250%;
+	letter-spacing: 3px;
+	height: 55px;
+
+	background-color: #FFF;
+}
+
+.accueil_div_12 .column h3 {
+	font-family:'Helvetica Neue', sans-serif; 
+	text-transform: none;
+	text-align: center;
+	color : #4f4f4f;
+	font-size: 175%;
+	height: 110px;
+	background-color: #FFF;
+
 }
 
 
@@ -556,26 +555,28 @@ html {
 	text-transform: uppercase;
 	text-align: center;
 	color : #4f4f4f;
-	top: 400px;
+	top: 500px;
 	position: relative;
 	font-size: 350%;
 	letter-spacing: 3px;
 	margin: 0;
 	padding-top: 5%;
-	height: 250px;
+	height: 150px;
 	background-color: #FFF;
 }
 
 .accueil_div_6 p{
 	position: relative;
-	top: 400px;
-	text-align: center;
+	top: 500px;
+	text-align: justify;
 	justify-content: left;
+	font-size: 200%;
 	color: #2e484c;
 	font-family: 'Helvetica Neue', sans-serif;
-	font-size: 1.0em;
 	font-weight: normal;
-	height: 200px;
+	height: 250px;
+	width: 80%;
+	margin-left: 10%;
 }
 
 
@@ -613,7 +614,7 @@ html {
     width: 102%;
     margin: 0;
     padding: 0;
-    height: 480px;
+    height: 400px;
     position: absolute;left: -10px;top: 0px;
 }
 
@@ -649,7 +650,7 @@ html {
 
 .answer{
 	position: relative;
-	text-align: center;
+	text-align: justify;
 	justify-content: center;
 	color: #2e484c;
 	font-family: 'Helvetica Neue', sans-serif;
@@ -657,6 +658,8 @@ html {
 	font-weight: normal;
 	height: 100px;
 	top:490px;
+	width: 60%;
+	margin-left: 20%;
 }
 
 
@@ -692,7 +695,6 @@ html {
 
 }
 
-body {font-family: Arial, Helvetica,sans-serif;overflow-x:hidden;height: 100%;margin:0;padding: 0;display: flex;flex-direction: column;}
 * {box-sizing: border-box;}
 
 input[type=text], select, textarea {
@@ -955,69 +957,74 @@ input[type=submit]:hover {
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
-.partieInfoPrive{
+.InformationUsers{
 	display: flex;
 	position: absolute;
 	left: 25%;top: 25%;
-	width: 400px;height: 250px;
-	background-color: red;
+	width: 250px;height: 100px;
+	background-color: #B8C3CB;
 	border-radius: 5px;
 }
 
-.partieEditInfoPrive{
+.EditProfile{
 	display: flex;
 	position: absolute;
-	width: 400px;height: 250px;
-	background-color: red;
+	width: 250px;height: 100px;
+	background-color: #B8C3CB;
 	border-radius: 5px;
 	left: 25%;top:60%;
 }
 
-.partieInfoResultat{
+.InfoResultat{
 	display: flex;
 	position: absolute;
-	width: 400px;height: 250px;
-	background-color: red;
+	width: 250px;height: 100px;
+	background-color: #B8C3CB;
 	border-radius: 5px;
 	right: 25%;top: 25%;
 }
-.partieInfoTest{
+.InfoTests{
 	display: flex;
 	position: absolute;
-	width: 400px;height:250px;
-	background-color: red;
+	width: 250px;height:100px;
+	background-color: #B8C3CB;
 	border-radius: 5px;
 	right: 25%;top: 60%;
 }
-.partieInfoPrive a, .partieEditInfoPrive a,.partieInfoResultat a,.partieInfoTest a{
-	
+.InformationUsers a, .EditProfile a,.InfoResultat a,.InfoTests a{
 	display: block;
-	width: 400px;
+	width: 250px;
+	height: 100px;
 	text-decoration: none;
 	text-align: center;
 	transition: background-color 0.3s ease-out,
 	color 0.1s ease-out;
 	border-radius: 5px;
+	padding-bottom: 42px;
 }
 
-.partieInfoPrive a:hover, .partieEditInfoPrive a:hover,.partieInfoResultat a:hover,.partieInfoTest a:hover{
-	background-color: #5F829B; 
+.InformationUsers a:hover, .EditProfile a:hover,.InfoResultat a:hover,.InfoTests a:hover{
+	background-color: #70777C; 
     color: white;
 }
 
+.link{
+	color:#2e484c;
+}
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
-/* !!!!!!!!!!!!Compte prive!!!!!!!!! */
+/* !!!!!!!Données utilisateurs!!!!!! */
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 .partieDeDonnee{
-	width: 1000px;height: 550px;
-	background-color: red;
+	width: 50%;
+	height: 400px;
+	background-color: #B8C3CB;
 	display: flex;
 	position: absolute;
-	left: 25%;
 	top: 25%;
+	left: 25%;
 	border-radius: 5px;
 }
 .partieEditInformation{
@@ -1045,18 +1052,44 @@ input[type=submit]:hover {
 	margin-left: 20%;
   }
 
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+/* !!!!!!!Capteurs!!!!!! */
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 .tableauCapteur{
 	position: absolute;
-	left: 25%;top: 25%;
-	width: 400px;height: 250px;
+	left: 37%;top: 25%;
+	width: 400px;height: 150px;
+	top:200px;
 	border-radius: 5px;
+	position:relative;
+    display: grid;
+}
+
+
+.tableauCapteur table, td{
+	border: 2px solid black;
+}
+
+.capteur h1{
+	text-transform: uppercase;
+    text-align: center;
+    font-size: 2em;
+    letter-spacing: 3px;
+    margin:0;
+    position: relative;
+    top: 100px;
+    color: #2e484c;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 2.2em;
 }
 
 .formbis {
 	position: absolute;
 	left:30%;
-	top: 50%;
+	top: 80%;
 	height: 300px;
 	border-radius: 20px;
 	width: 40%;
@@ -1065,6 +1098,8 @@ input[type=submit]:hover {
 	justify-content: center;
 	text-align: center;
 }
+
+
 .formbis .champEdit {
 	position: absolute;
 	width: 40%;
@@ -1093,7 +1128,7 @@ input[type=submit]:hover {
     letter-spacing: 3px;
     margin:0;
     position: relative;
-    top: 70px;
+    top: 100px;
     color: #2e484c;
     font-family: 'Helvetica Neue', sans-serif;
     font-size: 2.2em;
@@ -1109,17 +1144,23 @@ input[type=submit]:hover {
 .contenu_page {
     position:relative;
     display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr;
-      padding-top: 120px;
+      padding-top: 100px;
     text-align:center;
     align-items: center;
-    
+    height: 600px;    
 }    
 
+.contenu_page h1{
+	font-size: 150%;
+	color:#717D8B;
+	font-family: 'Helvetica Neue', sans-serif;
+}
+
+
 .profile_picture {
-    width:60%;
-    margin-left:21%;
+    width:100%;
 }
 
 .profile_picture img {
@@ -1133,5 +1174,5 @@ input[type=submit]:hover {
     border: 2px solid #28576D;
     border-radius: 20px;
     font-family: "Helvetica Neue", Arial, sans-serif;
-
+    font-size: 150%;
 }

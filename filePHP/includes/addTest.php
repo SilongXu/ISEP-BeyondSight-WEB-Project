@@ -18,7 +18,7 @@
             }
 
         }else{
-            echo "les champs ne sont pas tous remplies";
+            echo "Les champs ne sont pas tous remplis";
         }
     
 ?>

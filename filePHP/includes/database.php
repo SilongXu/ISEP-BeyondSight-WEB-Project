@@ -1,8 +1,6 @@
 <?php
 	
 
-
-
 	$HOST='localhost:3308';
 
 	$DB_NAME='beyondsight';

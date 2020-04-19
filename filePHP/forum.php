@@ -4,26 +4,10 @@
     <?php include "includes/header.php" ?>
 
     <body>
-<<<<<<< HEAD
-    	<!-- Menu Bar -->
-=======
-<<<<<<< Updated upstream
-        <!-- Menu Bar -->
->>>>>>> master
-        <?php include "includes/menubar.php" ?>
-        <!-- Bouton Search-->
-        <?php include "includes/searchbar.php" ?>
-=======
     	<!-- Menu Bar -->
         <?php include "includes/menubar.php" ?>
         <!-- Bouton Search-->
         <?php include "includes/searchbar.php" ?>
-
-
->>>>>>> Stashed changes
-
-
-
 
     	<!-- Forum Page 1 -->
         <div class = "forum_page_1">

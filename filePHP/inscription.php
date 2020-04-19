@@ -4,8 +4,8 @@
     <?php include "includes/header.php" ?>
 
     <body>
-    	<!-- Menu Bar -->
-    	<?php include "includes/menubar.php" ?>
+      <!-- Menu Bar -->
+      <?php include "includes/menubar.php" ?>
         <!-- Bouton Search-->
         <?php include "includes/searchbar.php" ?>
 
@@ -17,13 +17,8 @@
 
 
                 <div class = "form">
-
                     <form method = "post">
                         <label for="prenom">Prénom</label>
-
-                    <form method = "post" action="accueil.php">
-                        <label for="fname">Prénom</label>
-
                         <input class="champ" type="text" name="prenom" id="prenom" placeholder="Jean..." required>
 
                         <label for="nom">Nom</label>
@@ -49,55 +44,15 @@
                         include 'includes/signin.php';
                 ?>
 
-		</div>
-		
-		
+    </div>
+    
+    
         <?php
             if(isset($_SESSION['signIn'])){
                 header('location: '.'connexion.php');
                 unset($_SESSION['signIn']);
-                }
-
+            }
         ?>
-        	if (isset($_POST['formsend'])) {
-  				extract($_POST);
-
-  				if (!empty($password) && !empty($cpassword) && !empty($tel) && !empty($email) && !empty($nom) && !empty($prenom) && ($tel<=699999999)) {
-  					
-  					if ($password == $cpassword) {
-  						$options = ['cost' => 12,];
-  					}
-
-  					$hashpass = password_hash($password, PASSWORD_BCRYPT, $options);
-
-  					include 'includes/database.php';
-  					global $db;
-
-  					$c = $db->prepare("SELECT email FROM utilisateurs WHERE email = :email");
-  					$c->execute(['email' => $email]);
-  					$result = $c->rowCount();
-
-  					if ($result==0) {
-  						echo 'Votre compte a été créé';
-
-  						$q = $db->prepare("INSERT INTO utilisateurs(nom,prenom,email,password,tel,role) VALUES(:nom,:prenom,:email,:password,:tel,:role)"); //requete query
-  						$q->execute([
-  						'nom' => $nom,
-  						'prenom' => $prenom,
-  						'email' => $email,
-  						'tel' => $tel,
-  						'role' => 'Invité',
-  						'password' => $hashpass
-  						]);
-
-
-  					}else{
-  						echo 'Un email existe déjà';
-  					}
-  				}	
-  				else{
-  					echo "Les champs ne sont pas tous remplis";
-  				}
 
 
         

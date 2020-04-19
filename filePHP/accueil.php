@@ -15,23 +15,29 @@
         	<!-- accueil Page 1 -->
         	<div class = "accueil_div_1">
     	    	<h1 class = "bs_title">InfiniteMeasures</h1>
-    	    	<h2 class = "bs_subtitle">MakesMeasuresGreatAgain</h2>
+    	    	<h2 class = "bs_subtitle">Experts en mesures</h2>
         	</div>
 
 
             <!-- accueil Page 1.2 -->
             <div class="accueil_div_12">
                 <h1>Notre produit</h1>
-                <div id="case_1" class="column">
+                <div id ="case1" class="column">
                     <h2 >Un boîtier</h2>
+                </div>
+                <div id ="case2" class="column">
+                    <h2>Des tests </h2>
+                </div>
+                <div id ="case3" class="column">
+                    <h2>Une plateforme </h2>
+                </div>
+                <div id ="case1" class="column">
                     <h3>révolutionnaire</h3>
                 </div>
-                <div id="case_2" class="column">
-                    <h2>Des tests </h2>
+                <div id ="case2" class="column">
                     <h3>scientifiquement approuvés</h3>
                 </div>
-                <div id="case_3" class="column">
-                    <h2>Une plateforme </h2>
+                <div id ="case3" class="column">
                     <h3>simple et ludique</h3>
                 </div>
             </div>
@@ -90,7 +96,12 @@
 
             <div class = "accueil_div_6">
                 <h1>Notre histoire</h1>
-                <p>Equipe d'ingénieurs de l'ISEP...</p>
+                <p>Infinite Measures est une jeune start-up du numérique opérant dans le domaine de la mesure, alliant les différents outils du numérique. L'équipe est composé de 6 ingénieurs sortant tout droit de l'ISEP une des meilleures écoles d'ingénieurs du numérique. Leur passion pour le numérique ainsi que pour la santé les a poussés à développer ce tout nouveau projet.
+
+
+
+
+                </p>
             </div>
 
         </div>

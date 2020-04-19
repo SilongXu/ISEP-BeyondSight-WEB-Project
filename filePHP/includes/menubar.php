@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 <?php session_start();
     error_reporting(0);
 ?>
-=======
-<?php session_start();?>
->>>>>>> master
 <!DOCTYPE html>
 <html>
 
@@ -29,15 +25,15 @@
                 ?>
 
                     <div class = "right">
-				        <div><a href="connexion.php" >Connexion</a></div>
-				        <div><a href="inscription.php" >Inscription</a></div>
-			        </div>
+                        <div><a href="connexion.php" >Connexion</a></div>
+                        <div><a href="inscription.php" >Inscription</a></div>
+                    </div>
 
                 <?php
                 }elseif(isset($_SESSION['email'])){
                 ?>
                 <div class = "right">
-				    <div><a href="ComptePrive.php" >Profil</a></div>
+                    <div><a href="ComptePrive.php" >Profil</a></div>
                     <div><a href="accueil.php" >Se Déconnecter</a></div>
                 </div>
                 <?php
