@@ -1044,10 +1044,6 @@ input[type=submit]:hover {
 	display: list-item;
 	margin-left: 20%;
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> master
 
 
 .tableauCapteur{
@@ -1083,3 +1079,59 @@ input[type=submit]:hover {
 	display: list-item;
 	margin-left: 20%;
   }
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+/* !!!!!! Éditer mon profil title  !!!!!! */
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+.edit_profile_title h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2em;
+    letter-spacing: 3px;
+    margin:0;
+    position: relative;
+    top: 70px;
+    color: #2e484c;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 2.2em;
+}
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+/* !!!!! Éditer mon profil contenu !!!!! */
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+.contenu_page {
+    position:relative;
+    display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      padding-top: 120px;
+    text-align:center;
+    align-items: center;
+    
+}    
+
+.profile_picture {
+    width:60%;
+    margin-left:21%;
+}
+
+.profile_picture img {
+    max-width:60%;
+    height:auto;
+}
+
+.styled { 
+    background-color: transparent;
+    color: #28576D;
+    border: 2px solid #28576D;
+    border-radius: 20px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+
+}
