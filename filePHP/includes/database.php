@@ -3,14 +3,14 @@
 
 
 
-	define('HOST', 'localhost:3308');
+	$HOST='localhost:3308';
 
-	define('DB_NAME', 'beyondsight');
-	define('USER', 'root');
-	define('PASS', '');
+	$DB_NAME='beyondsight';
+	$USER='root';
+	$PASS='';
 
 	try{
-		$db = new PDO("mysql:host=" . HOST . ";dbname=" . DB_NAME,USER, PASS);
+		$db = new PDO("mysql:host=" . $HOST . ";dbname=" . $DB_NAME,$USER, $PASS);
 		$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //afficher les erreurs
 		//echo 'connecté';
 

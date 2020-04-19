@@ -13,14 +13,7 @@
         var msg = confirm("Are you sure you want to delete this test?");
 
     if (msg) {
-        window.location = "capteurs.php?did="+id+"&test=&capteur=";
-    }
-    }
-       function ajouttest(test,capteur){
-        var msg = confirm("Are you sure you want to add this test?");
-
-    if (msg) {
-        window.location = "capteurs.php?did=&test="+test+"&capteur="+capteur;
+        window.location = "capteurs.php?did="+idTest;
     }
     }
 
@@ -90,9 +83,6 @@ if ($conn->connect_error) {
                 if($_GET['did']!=""){
             $conn->query("delete from tests where idTest=".$_GET["did"]);
         }
-                        if($_GET['test']!="" && $_GET['capteur']!=""){
-            $conn->query("insert into tests(test,capteur) ".$_GET["did"]);
-        }
 $sql = "SELECT idTest, capteur, test FROM tests";
 $result = $conn->query($sql);
 
@@ -122,24 +112,10 @@ $conn->close();
   
                         <input type="submit" name="formsend" id="formsend" value="Ok">
                     </form>
+                                    <?php  include 'includes/database.php"';
+                        include 'includes/addTest.php';
+                ?>
                 
-                <?php
 
-
-            if (isset($_POST['formsend'])) {
-                extract($_POST);
-
-                if (!empty($capteur) && !empty($test)) {
-
-                    include 'includes/database.php';
-                    global $db;
-                    echo "<a href=\"javascript:ajouttest(".$test.",".$capteur.")\">";
-                }   
-                else{
-                    echo "Les champs ne sont pas tous remplis";
-                }
-
-            }
-            
-        ?></div>
+        </div>
 </html>
