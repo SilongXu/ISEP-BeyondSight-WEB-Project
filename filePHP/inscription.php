@@ -17,13 +17,13 @@
 
 
                 <div class = "form">
-<<<<<<< HEAD
+
                     <form method = "post">
                         <label for="prenom">Prénom</label>
-=======
+
                     <form method = "post" action="accueil.php">
                         <label for="fname">Prénom</label>
->>>>>>> master
+
                         <input class="champ" type="text" name="prenom" id="prenom" placeholder="Jean..." required>
 
                         <label for="nom">Nom</label>
@@ -57,11 +57,8 @@
                 header('location: '.'connexion.php');
                 unset($_SESSION['signIn']);
                 }
+
         ?>
-
-<<<<<<< HEAD
-=======
-
         	if (isset($_POST['formsend'])) {
   				extract($_POST);
 
@@ -101,7 +98,7 @@
   				else{
   					echo "Les champs ne sont pas tous remplis";
   				}
->>>>>>> master
+
 
         
 

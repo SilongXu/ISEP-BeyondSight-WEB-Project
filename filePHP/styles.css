@@ -1057,3 +1057,29 @@ input[type=submit]:hover {
 	border-radius: 5px;
 }
 
+.formbis {
+	position: absolute;
+	left:30%;
+	top: 50%;
+	height: 300px;
+	border-radius: 20px;
+	width: 40%;
+	background-color: #DFE7EE;
+	padding: 2%;
+	justify-content: center;
+	text-align: center;
+}
+.formbis .champEdit {
+	position: absolute;
+	width: 40%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin-top: 6px;
+	margin-bottom: 9px;
+	text-align: center;
+	resize: vertical;
+	display: list-item;
+	margin-left: 20%;
+  }

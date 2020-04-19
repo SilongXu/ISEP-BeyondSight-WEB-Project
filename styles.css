@@ -894,7 +894,7 @@ input[type=submit]:hover {
 	text-align: center;
 }
 
-<<<<<<< Updated upstream
+
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
@@ -916,7 +916,7 @@ input[type=submit]:hover {
 
 
 
-=======
+
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 /* !!!!!! Éditer mon profil  !!!!!! */
@@ -934,10 +934,38 @@ input[type=submit]:hover {
     transition: background-color 0.3s ease-out,
     			color 0.1s ease-out;
 }
->>>>>>> Stashed changes
+
 .tableauCapteur{
 	position: absolute;
 	left: 25%;top: 25%;
 	width: 400px;height: 250px;
 	border-radius: 5px;
+}
+
+.formbis {
+	position: absolute;
+	left:30%;
+	top: 50%;
+	height: 500px;
+	border-radius: 20px;
+	width: 40%;
+	background-color: #DFE7EE;
+	padding: 2%;
+	justify-content: center;
+	text-align: center;
+}
+
+
+.formbis input[type=text], select, textarea .champ {
+  width: 60%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 9px;
+  text-align: center;
+  resize: vertical;
+  display: list-item;
+  margin-left: 20%;
 }

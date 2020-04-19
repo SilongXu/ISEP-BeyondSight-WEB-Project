@@ -8,31 +8,22 @@
     </head>
 
     <script>
-<<<<<<< HEAD
-        function remove(idCap){
-              if (str.length == 0) {
-    document.getElementById("txtHint").innerHTML = "";
-    return;
-  } else {
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        document.getElementById("txtHint").innerHTML = this.responseText;
-      }
-    };
-            xmlhttp.open("GET", "removeCapteur.php?q=" + idCap, true);
-    xmlhttp.send();
-  }
-        }
-=======
-   function delproduct(id){
-        var msg = confirm("Are you sure you want to delete this product?");
+
+   function deltest(id){
+        var msg = confirm("Are you sure you want to delete this test?");
 
     if (msg) {
-        window.location = "capteurs.php?did="+id;
+        window.location = "capteurs.php?did="+id+"&test=&capteur=";
     }
     }
->>>>>>> master
+       function ajouttest(test,capteur){
+        var msg = confirm("Are you sure you want to add this test?");
+
+    if (msg) {
+        window.location = "capteurs.php?did=&test="+test+"&capteur="+capteur;
+    }
+    }
+
     </script>
 
     <body>
@@ -76,14 +67,15 @@
             </a>
         </div>
 
-<<<<<<< HEAD
+
         <div>
     	<?php
-=======
-        <div class="tableauCapteur">
-    	<?php
 
->>>>>>> master
+        echo "<div class='tableauCapteur'>";
+    	
+
+
+
 $servername = "localhost:3308";
 $username = "root";
 $password = "";
@@ -98,19 +90,20 @@ if ($conn->connect_error) {
                 if($_GET['did']!=""){
             $conn->query("delete from tests where idTest=".$_GET["did"]);
         }
+                        if($_GET['test']!="" && $_GET['capteur']!=""){
+            $conn->query("insert into tests(test,capteur) ".$_GET["did"]);
+        }
 $sql = "SELECT idTest, capteur, test FROM tests";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     echo "<table><tr><th>ID</th><th>Capteur</th><th>Test</th><th>Effacer</th></tr>";
     // output data of each row
-    while($row = $result->fetch_assoc()) {
-<<<<<<< HEAD
-        echo "<tr><td>".$row["idTest"]."</td><td>".$row["capteur"]."</td><td>".$row["test"]."</td><td><button onclick='remove(".$row["idTest"].")'>Suppr</button></td></tr>";
-=======
+    while($row = $result->fetch_assoc()) {;
+
         $q=$row["idTest"];
-        echo "<tr><td>".$row["idTest"]."</td><td>".$row["capteur"]."</td><td>".$row["test"]."</td><td><a href=\"javascript:delproduct(id=".$row["idTest"].")\">Delete</a></tr>";
->>>>>>> master
+        echo "<tr><td>".$row["idTest"]."</td><td>".$row["capteur"]."</td><td>".$row["test"]."</td><td><a href=\"javascript:deltest(id=".$row["idTest"].")\">Delete</a></tr>";
+
     }
     echo "</table>";
 } else {
@@ -119,4 +112,34 @@ if ($result->num_rows > 0) {
 $conn->close();
 ?>
 </div>
+                <div class = "formbis">
+                    <form method = "post">
+                        <label for="lname">Nom du capteur</label>
+                        <input class="champ" type="text" name="capteur" id="capteur" placeholder="Mon capteur" required>
+
+                        <label for="lname">Type de test</label>
+                        <input class="champ" type="text" name="test" id="test" placeholder="Mon test" required>
+  
+                        <input type="submit" name="formsend" id="formsend" value="Ok">
+                    </form>
+                
+                <?php
+
+
+            if (isset($_POST['formsend'])) {
+                extract($_POST);
+
+                if (!empty($capteur) && !empty($test)) {
+
+                    include 'includes/database.php';
+                    global $db;
+                    echo "<a href=\"javascript:ajouttest(".$test.",".$capteur.")\">";
+                }   
+                else{
+                    echo "Les champs ne sont pas tous remplis";
+                }
+
+            }
+            
+        ?></div>
 </html>
