@@ -13,7 +13,7 @@
         var msg = confirm("Are you sure you want to delete this test?");
 
     if (msg) {
-        window.location = "capteurs.php?did="+idTest;
+        window.location = "capteurs.php?did="+id;
     }
     }
 
