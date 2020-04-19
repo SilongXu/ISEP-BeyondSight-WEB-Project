@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3308
--- Généré le :  mar. 14 avr. 2020 à 13:16
+-- Généré le :  Dim 19 avr. 2020 à 08:49
 -- Version du serveur :  8.0.18
 -- Version de PHP :  7.3.12
 
@@ -140,10 +140,19 @@ CREATE TABLE IF NOT EXISTS `resultats` (
 
 DROP TABLE IF EXISTS `tests`;
 CREATE TABLE IF NOT EXISTS `tests` (
-  `idTest` int(11) NOT NULL,
+  `idTest` int(11) NOT NULL AUTO_INCREMENT,
   `capteur` varchar(45) COLLATE utf8_bin NOT NULL,
-  `test` varchar(100) COLLATE utf8_bin NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+  `test` varchar(100) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`idTest`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Déchargement des données de la table `tests`
+--
+
+INSERT INTO `tests` (`idTest`, `capteur`, `test`) VALUES
+(1, 'Capteur cardiaque', 'Fréquence cardiaque'),
+(2, 'Micro', 'Reconnaître une fréquence sonore');
 
 -- --------------------------------------------------------
 
@@ -158,17 +167,18 @@ CREATE TABLE IF NOT EXISTS `utilisateurs` (
   `prenom` varchar(45) COLLATE utf8_bin NOT NULL,
   `adresseMail` varchar(100) COLLATE utf8_bin NOT NULL,
   `role` varchar(45) COLLATE utf8_bin NOT NULL,
-  `motDePasse` varchar(45) COLLATE utf8_bin NOT NULL,
+  `motDePasse` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `numeroDeTelephone` int(11) NOT NULL,
   PRIMARY KEY (`idUtilisateurs`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Déchargement des données de la table `utilisateurs`
 --
 
 INSERT INTO `utilisateurs` (`idUtilisateurs`, `nom`, `prenom`, `adresseMail`, `role`, `motDePasse`, `numeroDeTelephone`) VALUES
-(1, 'Dupont', 'Jean', 'jean.dupont@exemple.fr', 'Administrateur', 'Azerty123', 635465768);
+(1, 'Dupont', 'Jean', 'jean.dupont@exemple.fr', 'Administrateur', 'Azerty123', 635465768),
+(2, 'Lefever', 'Charles', 'charles.lefever@isep.fr', 'Administrateur', '1234', 646643193);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
