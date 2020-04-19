@@ -1,4 +1,3 @@
-<?php  include "includes/database.php"?>
 <!DOCTYPE html>
 <html>
     
@@ -18,22 +17,59 @@
         </div>
 
         <div class="frameConnexion">
-            <form metod="POST" action="includes/login.php">
+            <form method="post" >
                 <label for="lname">Email</label>
                 <input class="champ" type="email" name="loginEmail" id="email" placeholder="monemail@gmail.com..." required>
 
                 <label for="lname">Mot de passe</label>
-                <input class="champ" type="password" name="password" id="password" placeholder="1234..." required>
+                <input class="champ" type="password" name="loginPassword" id="password" placeholder="1234..." required>
 
                 <input type="submit" name="formlogin" id="formlogin" value="Login">
             </form>
         </div>
 
-        <?php  include "includes/login.php" ?>
+        <?php  include 'includes/database.php';
+               
+
+
+               global $db;
+               if(isset($_POST['formlogin'])){
+                   extract($_POST);
+           
+                   if(!empty($loginEmail) && !empty($loginPassword)){
+                       $q =$db->prepare("SELECT * FROM utilisateurs WHERE adresseMail = :email");
+                       $q->execute(['email' => $loginEmail]);
+                       $result =$q->fetch();
+           
+                       if($result ==true){
+                           $_SESSION['email']=$loginEmail;
+           
+                           //$hashpassword = $result['motDePasse'];
+                           if(password_verify($loginPassword,$result['motDePasse'])){
+                               //Ajouter les sessions ici
+                               
+                               
+                               echo 'Connect en cours';
+           
+                           }else{
+                               echo "le mot de passe n'est pas correcte";
+                           }
+                       }else{
+                           echo " Le compte portant l'eamil ". $loginEmail ."n'existe pas";
+                       }
+                   }
+                   else {
+                       echo "Veuillez compléter l'ensemble des champs";
+                   }
+               }
+
+
+
+        ?>
 
         <?php
             if(isset($_SESSION['email'])){
-                header("Refresh:3;url=ComptePrive.php");
+                header('location: '.'ComptePrive.php');
             }
         ?>
 

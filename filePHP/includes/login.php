@@ -1,19 +1,23 @@
 <?php
     
+    global $db;
     if(isset($_POST['formlogin'])){
         extract($_POST);
 
         if(!empty($loginEmail) && !empty($loginPassword)){
-            $q =$db->prepare("SELECT * FROM utilisateurs WHERE adressMail =:email");
+            $q =$db->prepare("SELECT * FROM utilisateurs WHERE adresseMail = :email");
             $q->execute(['email' => $loginEmail]);
             $result =$q->fetch();
 
             if($result ==true){
-                $hashpassword = $result['motDePasse'];
-                if(password_verify($MotDePasse,$result['motDePasse'])){
+                $_SESSION['email']=$loginEmail;
+
+                //$hashpassword = $result['motDePasse'];
+                if(password_verify($loginPassword,$result['motDePasse'])){
                     //Ajouter les sessions ici
                     
-                    $_SESSION['email']=$result['email'];
+                    
+                    echo 'Connect en cours';
 
                 }else{
                     echo "le mot de passe n'est pas correcte";
