@@ -98,9 +98,6 @@
                 <h1>Notre histoire</h1>
                 <p>Infinite Measures est une jeune start-up du numérique opérant dans le domaine de la mesure, alliant les différents outils du numérique. L'équipe est composé de 6 ingénieurs sortant tout droit de l'ISEP une des meilleures écoles d'ingénieurs du numérique. Leur passion pour le numérique ainsi que pour la santé les a poussés à développer ce tout nouveau projet.
 
-
-
-
                 </p>
             </div>
 

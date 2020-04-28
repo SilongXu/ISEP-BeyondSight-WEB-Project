@@ -622,7 +622,9 @@ html {
     margin-bottom: 100px;
 }
 
-
+#answer2, #answer3,#answer4,#answer5,#answer6{
+	display: none;
+}
 
 .question{
 	text-align: center;
@@ -637,7 +639,7 @@ html {
 	top: 480px;
 }
 
-.question:after {
+.question::after {
     content: " ";
     background: url("images/fleche.png") no-repeat 0 0;
     background-size: 100%;
