@@ -12,16 +12,16 @@
 
         <div id="bgConnexion">
             <div id="titleConnexion">
-                <h2 id= "h2Connexion">Connexion<h2/>
+                <h2 id= "h2Connexion"><?php echo $lang['connexion_titre']?><h2/>
             </div>
         </div>
 
         <div class="frameConnexion">
             <form method="post" >
-                <label for="lname">Email</label>
+                <label for="lname"><?php echo $lang['connexion_email']?></label>
                 <input class="champ" type="email" name="loginEmail" id="email" placeholder="monemail@gmail.com..." required>
 
-                <label for="lname">Mot de passe</label>
+                <label for="lname"><?php echo $lang['connexion_mdp']?></label>
                 <input class="champ" type="password" name="loginPassword" id="password" placeholder="1234..." required>
 
                 <input type="submit" name="formlogin" id="formlogin" value="Login">

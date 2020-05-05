@@ -307,7 +307,7 @@ html {
 	text-transform: uppercase;
 	text-align: center;
 	color : #4f4f4f;
-	font-size: 175%;
+	font-size: 2%;
 	letter-spacing: 3px;
 	margin: 0;
 	height: 150px;
@@ -327,7 +327,7 @@ html {
 	text-transform: uppercase;
 	text-align: center;
 	color : #4f4f4f;
-	font-size: 250%;
+	font-size: 200%;
 	letter-spacing: 3px;
 	height: 55px;
 
@@ -923,6 +923,19 @@ input[type=submit]:hover {
   resize: vertical;
   display: list-item;
   margin-left: 20%;
+}
+
+button[type=submit] {
+  background-color: #3B9DAD;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+button[type=submit]:hover {
+  background-color: #2F7F8D;
 }
 
 .form input[type=email], select, textarea .champ {

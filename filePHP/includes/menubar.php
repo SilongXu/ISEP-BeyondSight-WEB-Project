@@ -1,5 +1,6 @@
-<?php session_start();
-    error_reporting(0);
+<?php //session_start();
+    //error_reporting(0);
+    include "config.php";
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,10 +14,10 @@
             </a>
         </div>
         <div class = "center">
-            <div><a href="accueil.php">Accueil</a></div>
-            <div><a href="forum.php">Forum</a></div>
-            <div><a href="FAQ.php">FAQ</a></div>
-            <div><a href="contact.php">Contact</a></div>        
+            <div><a id ="" href="accueil.php"><?php echo $lang['accueil']?></a></div>
+            <div><a id ="" href="forum.php"><?php echo $lang['forum']?></a></div>
+            <div><a id ="" href="FAQ.php"><?php echo $lang['faq']?></a></div>
+            <div><a id ="" href="contact.php"><?php echo $lang['contact']?></a></div>        
         </div>
 
         <?php
@@ -25,30 +26,34 @@
                 ?>
 
                     <div class = "right">
-                        <div><a href="connexion.php" >Connexion</a></div>
-                        <div><a href="inscription.php" >Inscription</a></div>
+                        <div><a id ="" href="connexion.php" ><?php echo $lang['connexion']?></a></div>
+                        <div><a id ="" href="inscription.php" ><?php echo $lang['inscription']?></a></div>
                     </div>
 
                 <?php
                 }elseif(isset($_SESSION['email'])){
                 ?>
                 <div class = "right">
-                    <div><a href="ComptePrive.php" >Profil</a></div>
-                    <div><a href="accueil.php" >Se Déconnecter</a></div>
+                    <div><a id ="" href="ComptePrive.php" >Profil</a></div>
+                    <div><a id ="" href="accueil.php" >Se Déconnecter</a></div>
                 </div>
                 <?php
                 }
         ?>
 
         <div class = "langues">
-            <span>Fr</span>
+            <span>Langues</span>
             <div class = "not_choosen_language">
                 <ul>
-                    <li><a href="">English</a></li>
-                    <li><a href="">Chinese</a></li>
+                    <li><a href="accueil.php?lang=fr" ><?php echo $lang['français']?></a></li>
+                    <li><a href="accueil.php?lang=en" ><?php echo $lang['anglais']?></a></li>
+                    <li><a href="" ><?php echo $lang['chinois']?></a></li>
                 </ul>
             </div>
         </div>
+
+
+
     </nav>
 </body>
 </html>

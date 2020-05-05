@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html >
 
@@ -15,30 +16,30 @@
         	<!-- accueil Page 1 -->
         	<div class = "accueil_div_1">
     	    	<h1 class = "bs_title">InfiniteMeasures</h1>
-    	    	<h2 class = "bs_subtitle">Experts en mesures</h2>
+    	    	<h2 class = "bs_subtitle"><?php echo $lang['accueil_sousTitre']?></h2>
         	</div>
 
 
             <!-- accueil Page 1.2 -->
             <div class="accueil_div_12">
-                <h1>Notre produit</h1>
+                <h1><?php echo $lang['accueil_sousTitre']?></h1>
                 <div id ="case1" class="column">
-                    <h2 >Un boîtier</h2>
+                    <h2 ><?php echo $lang['accueil_unBoitier']?></h2>
                 </div>
                 <div id ="case2" class="column">
-                    <h2>Des tests </h2>
+                    <h2><?php echo $lang['accueil_desTests']?></h2>
                 </div>
                 <div id ="case3" class="column">
-                    <h2>Une plateforme </h2>
+                    <h2><?php echo $lang['accueil_plateforme']?></h2>
                 </div>
                 <div id ="case1" class="column">
-                    <h3>révolutionnaire</h3>
+                    <h3><?php echo $lang['accueil_revolutionnaire']?></h3>
                 </div>
                 <div id ="case2" class="column">
-                    <h3>scientifiquement approuvés</h3>
+                    <h3><?php echo $lang['accueil_scientifiquement']?></h3>
                 </div>
                 <div id ="case3" class="column">
-                    <h3>simple et ludique</h3>
+                    <h3><?php echo $lang['accueil_simpleLudique']?></h3>
                 </div>
             </div>
 
@@ -47,30 +48,30 @@
 
         	<!-- accueil Page 2 -->
             <div class="accueil_div_2">
-                <h1>Qui sont nos utilisateurs ?</h1>
+                <h1><?php echo $lang['accueil_utilisateurs']?></h1>
                 <div class="column">
-                    <h2>15%</h2>
+                    <h2><?php echo $lang['accueil_15_1']?></h2>
                 </div>
                 <div class="column">
-                    <h2>70%</h2>
+                    <h2><?php echo $lang['accueil_70']?></h2>
                 </div>
                 <div class="column">
-                    <h2>15%</h2>
+                    <h2><?php echo $lang['accueil_15_2']?></h2>
                 </div>
                 <div class="column">
-                    <h1>Pilotes</h1>
+                    <h1><?php echo $lang['accueil_pilotes']?></h1>
                 </div>
                 <div class="column">
-                    <h1>Automobilistes</h1>
+                    <h1><?php echo $lang['accueil_automobilistes']?></h1>
                 </div>
                 <div class="column">
-                    <h1>Conducteurs</h1>
+                    <h1><?php echo $lang['accueil_conducteurs']?></h1>
                 </div>
             </div>
 
             <div class = "accueil_div_3"></div>
             <div class = "accueil_div_4">
-                <h1>Nos tests</h1>
+                <h1><?php echo $lang['accueil_nosTests']?></h1>
                 <div class="column">
                     <div class="icone_accueil1"></div>
                 </div>
@@ -81,13 +82,13 @@
                     <div class="icone_accueil3"></div>
                 </div>
                 <div class="column">
-                    <h1>Cardiaque</h1>
+                    <h1><?php echo $lang['accueil_cardiaque']?></h1>
                 </div>
                 <div class="column">
-                    <h1>Réflexes</h1>
+                    <h1><?php echo $lang['accueil_reflexe']?></h1>
                 </div>
                 <div class="column">
-                    <h1>Auditif</h1>
+                    <h1><?php echo $lang['accueil_auditif']?></h1>
                 </div>
             </div>
 
@@ -95,10 +96,8 @@
             <div class = "accueil_div_5"></div>
 
             <div class = "accueil_div_6">
-                <h1>Notre histoire</h1>
-                <p>Infinite Measures est une jeune start-up du numérique opérant dans le domaine de la mesure, alliant les différents outils du numérique. L'équipe est composé de 6 ingénieurs sortant tout droit de l'ISEP une des meilleures écoles d'ingénieurs du numérique. Leur passion pour le numérique ainsi que pour la santé les a poussés à développer ce tout nouveau projet.
-
-                </p>
+                <h1><?php echo $lang['accueil_histoire_titre']?></h1>
+                <p><?php echo $lang['accueil_histoire']?></p>
             </div>
 
         </div>
