@@ -13,10 +13,7 @@
 		"anglais" => "英语",
 		"chinois" => "中文",
 
-
-
-		//accueil
-		"accueil_sousTitre" => "专业检测"，
+		"accueil_sousTitre" => '专业检测',
 		"accueil_notreProduit" => "关于我们的产品",
 		"accueil_unBoitier" => "外形简易",
 		"accueil_desTests" => "多方面检测",

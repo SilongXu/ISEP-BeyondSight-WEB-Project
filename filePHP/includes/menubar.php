@@ -47,7 +47,7 @@
                 <ul>
                     <li><a href="accueil.php?lang=fr" ><?php echo $lang['français']?></a></li>
                     <li><a href="accueil.php?lang=en" ><?php echo $lang['anglais']?></a></li>
-                    <li><a href="" ><?php echo $lang['chinois']?></a></li>
+                    <li><a href="accueil.php?lang=ch" ><?php echo $lang['chinois']?></a></li>
                 </ul>
             </div>
         </div>

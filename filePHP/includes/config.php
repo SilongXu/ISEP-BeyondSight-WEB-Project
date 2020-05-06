@@ -12,6 +12,9 @@
 		elseif ($_GET['lang'] == "en"){
 			$_SESSION['lang']="en";
 		}
+		elseif ($_GET['lang'] == "ch"){
+			$_SESSION['lang']="ch";
+		}
 	}
 
 	require_once "langues/" . $_SESSION['lang'] . ".php";
