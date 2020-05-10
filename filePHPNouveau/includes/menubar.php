@@ -35,7 +35,7 @@
                 ?>
                 <div class = "right">
                     <div><a id ="" href="ComptePrive.php" >Profil</a></div>
-                    <div><a id ="" href="accueil.php" >Se Déconnecter</a></div>
+                    <div><a onclick ="window.open('includes/logout.php','_self')">Se Déconnecter</a></div>
                 </div>
                 <?php
                 }

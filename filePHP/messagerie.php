@@ -62,6 +62,6 @@ if ($result->num_rows > 0) {
 }
 $conn->close();
 ?>
-<a href="ecrireMessage.php">Envoyer un nouveau message</a>
+<a href="envoyerMessage.php">Envoyer un nouveau message</a>
 </body>
 </html>

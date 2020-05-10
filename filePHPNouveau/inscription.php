@@ -118,7 +118,7 @@
                 </script>
 
                 <?php  include 'includes/database.php';
-                       include 'includes/signin.php'; ?>
+                       ?>
 
     </div>
     
