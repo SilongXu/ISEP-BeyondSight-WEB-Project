@@ -44,7 +44,7 @@
 
                        if($result ==true){
                            $_SESSION['email']=$loginEmail;
-
+                           $_SESSION['idUtilisateur']=$result['idUtilisateurs'];
                            //$hashpassword = $result['motDePasse'];
                            if(password_verify($loginPassword,$result['motDePasse'])){
                                //Ajouter les sessions ici

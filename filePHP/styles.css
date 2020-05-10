@@ -1191,3 +1191,24 @@ button[type=submit]:hover {
     font-family: "Helvetica Neue", Arial, sans-serif;
     font-size: 150%;
 }
+
+/* !!!!!!!!!!!!!!!!!!!!!! */
+
+/* !!!!! Messagerie !!!!! */
+
+/* !!!!!!!!!!!!!!!!!!!!!! */
+
+.tableauMessage{
+	position: absolute;
+	left: 37%;top: 25%;
+	width: 400px;height: 150px;
+	top:200px;
+	border-radius: 5px;
+	position:relative;
+    display: grid;
+}
+
+
+.tableauMessage table, td{
+	border: 2px solid black;
+}
