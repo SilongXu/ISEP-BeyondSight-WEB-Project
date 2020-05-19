@@ -1212,3 +1212,20 @@ button[type=submit]:hover {
 .tableauMessage table, td{
 	border: 2px solid black;
 }
+
+
+
+/* !!!!!!!!!!!!!!!!!!!!!! */
+
+/* !!!!! Barre recherche! */
+
+/* !!!!!!!!!!!!!!!!!!!!!! */
+
+
+.form-group{
+	margin-top: 100px;
+}
+
+#result-search{
+	margin-top: 30px;
+}

@@ -14,7 +14,7 @@
                 $c->execute(['email' => $email]);
                 $result = $c->rowCount();
                   
-                if(result==0){
+                if($result==0){
                     
                     $q=$db->prepare("INSERT INTO utilisateurs(prenom,nom,adresseMail,motDePasse,numeroDeTelephone) VALUES(:prenom,:nom,:adresseMail,:motDePasse,:numeroDeTelephone)");
                     $q->execute([
