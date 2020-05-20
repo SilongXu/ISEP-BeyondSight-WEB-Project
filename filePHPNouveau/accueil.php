@@ -99,11 +99,10 @@
                 <h1><?php echo $lang['accueil_histoire_titre']?></h1>
                 <p><?php echo $lang['accueil_histoire']?></p>
             </div>
+            </div>
 
-        </div>
-
-
-        <footer class="footer"><h1>contenu du footer</h1> </footer>
+            <?php include "includes/footer.php" ?>
+        
 
     </body>
 </html>

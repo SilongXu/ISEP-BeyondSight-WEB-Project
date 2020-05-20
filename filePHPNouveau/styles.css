@@ -587,15 +587,20 @@ html {
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
-.main{
-  flex: 1 0 auto;
-}
 .footer{
-  flex-shrink: 0;
-  background: gray;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 3%;
+	background-color: #192933;
+	text-align: center;
+	line-height: 150%;
 }
-.footer h1{
-	font-size: 100%;
+
+.footer a{
+	text-decoration: underline;
+	color: white;
 }
 
 
@@ -1229,3 +1234,70 @@ button[type=submit]:hover {
 #result-search{
 	margin-top: 30px;
 }
+
+
+
+
+
+/* !!!!!!!!!!!!!!!!!!!!!! */
+
+/* !!!!! CGU !!!!!!!!!!!! */
+
+/* !!!!!!!!!!!!!!!!!!!!!! */
+
+.CGU_div1{
+	background-image: url("images/cgu.jpg");
+	background-color: #FFF;
+	background-size: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 102%;
+	margin: 0;
+	padding: 0;
+	height: 500px;
+	position: relative;left: -10px;top: 0px;
+}
+
+
+.CGU_div2 h1{
+	top: 500px;
+	text-align: center;
+	justify-content: center;
+	color: #2e484c;
+	font-family: 'Helvetica Neue', sans-serif;
+	font-size: 400%;
+	font-weight: normal;
+	text-transform: uppercase;
+	display: flex;
+	margin-top: 5px;
+}
+
+.CGU_div2 .sous-titre{
+	text-align: left;
+	top: 200px;
+	color: #2e484c;
+	font-family: 'Helvetica Neue', sans-serif;
+	font-size: 150%;
+	font-weight: normal;
+	display: flex;
+	margin-top: 5px;
+	width: 80%;
+	margin-left: 10%;
+}
+
+
+
+.CGU_div2 .texte{
+	top: 200px;
+	text-align: justify;
+	justify-content: center;
+	color: #2e484c;
+	font-family: 'Helvetica Neue', sans-serif;
+	font-size: 150%;
+	font-weight: normal;
+	display: flex;
+	margin-top: 5px;
+	width: 80%;
+	margin-left: 10%;
+}
+

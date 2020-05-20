@@ -32,8 +32,10 @@
 
             <input type="submit" value="Envoyer">
         </form>
-</div>
+    </div>
 
     </div>
+
+    <?php include "includes/footer.php" ?>
     </body>
 </html>

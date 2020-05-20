@@ -18,6 +18,8 @@
 	    	<h2 class = "bs_subtitle"></h2>
     	</div>
 
+
+        <?php include "includes/footer.php" ?>
     </div>
     </body>
 </html>

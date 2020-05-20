@@ -36,7 +36,7 @@
             <p class = "answer" id="answer6"><?php echo $lang['faq_reponse5']?><p/>
         </div> 
         
-
+        <?php include "includes/footer.php" ?>
 
     </div>
     </body>
