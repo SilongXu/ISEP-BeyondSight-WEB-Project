@@ -4,6 +4,12 @@
 ?>
 <!DOCTYPE html>
 <html>
+<script language="javascript">
+ function logout(){
+    window.location.href="logout.php";
+
+}
+</script>
 
 <body>
     <nav class = "menu_bar">
@@ -35,11 +41,13 @@
                 ?>
                 <div class = "right">
                     <div><a id ="" href="ComptePrive.php" >Profil</a></div>
-                    <div><a onclick ="window.open('includes/logout.php','_self')">Se Déconnecter</a></div>
+                    <div><a id="seDeconnecter" onclick="logout()" >Se Déconnecter</a></div>
                 </div>
                 <?php
                 }
+                
         ?>
+        
 
         <div class = "langues">
             <span>Langues</span>
@@ -56,4 +64,5 @@
 
     </nav>
 </body>
+
 </html>
