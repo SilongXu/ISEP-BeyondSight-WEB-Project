@@ -16,8 +16,8 @@
                 </div>
 
 
-                <div class = "form" onsubmit="return verifForm(this)">
-                    <form method = "post">
+                <div class = "form" >
+                    <form method = "post" action="">
                         <label for="prenom"><?php echo $lang['inscription_prenom']?></label>
                         <input class="champ" type="text" name="prenom" id="prenom" placeholder="Jean..." onblur="verifPrenomNom(this)" required>
 
@@ -41,86 +41,60 @@
                 </div>
 
 
-                <script type="text/javascript">
-
-                    function verifForm(f)
-                    {
-                       var nomOk = verifPrenomNom(f.nom);
-                       var prenomOk = verifPrenomNom(f.prenom);
-                       var mailOk = verifMail(f.email);
-                       var telOk = verifTel(f.tel);
-                       
-                       if(nomOk && prenomOk && mailOk && telOk){
-                          return true;
-                       }
-                  
-                       else
-                       {
-                          alert("Veuillez remplir correctement tous les champs");
-                          return false;
-                       }
-                    }
-
-
-                    function verifPrenomNom(champ){
-                       if(champ.value.length < 2 || champ.value.length > 25)
-                       {
-                          surligne(champ, true);
-                          return false;
-                       }
-                       else
-                       {
-                          surligne(champ, false);
-                          return true;
-                       }
-                    }
-
-
-
-                    function surligne(champ, erreur){
-                       if(erreur)
-                          champ.style.backgroundColor = "#fba";
-                       else
-                          champ.style.backgroundColor = "";
-                    }
-
-                    function verifMail(champ)
-                    {
-                       var regex = /^[a-zA-Z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$/;
-                       if(!regex.test(champ.value))
-                       {
-                          surligne(champ, true);
-                          return false;
-                       }
-                       else
-                       {
-                          surligne(champ, false);
-                          return true;
-                       }
-                    }
-
-                    function verifTel(champ)
-                    {
-                       var tel = parseInt(champ.value);
-                       if(isNaN(tel) || tel < 0 || tel > 799999999)
-                       {
-                          surligne(champ, true);
-                          return false;
-                       }
-                       else
-                       {
-                          surligne(champ, false);
-                          return true;
-                       }
-                    }
-
-
-                </script>
+                
 
                 <?php  include 'includes/database.php';
-                       ?>
 
-    </div>
+
+                        global $db;
+                        if(isset($_POST['formsend'])){
+                           extract($_POST);
+
+                           if(!empty($prenom) && !empty($nom) && !empty($tel) && !empty($email) &&!empty($password) && !empty($cpassword) ){
+                              if(filter_var($email,FILTER_VALIDATE_EMAIL)){
+                                    if($cpassword==$password){
+                                       $options =['cost' => 12,];
+                                       $hashpass =password_hash($password,PASSWORD_BCRYPT,$options);
+                                       
+
+                                       $c = $db->prepare("SELECT adresseMail FROM utilisateurs WHERE adresseMail = :email");
+                                       $c->execute(['email' => $email]);
+                                       $result = $c->rowCount();
+                                          
+                                       if($result==0){
+                                          
+                                          $q=$db->prepare("INSERT INTO utilisateurs(prenom,nom,adresseMail,motDePasse,numeroDeTelephone) VALUES(:prenom,:nom,:adresseMail,:motDePasse,:numeroDeTelephone)");
+                                          $q->execute([
+                                          'prenom'=>$prenom,
+                                          'nom'=>$nom,
+                                          'adresseMail'=>$email,
+                                          
+                                          'motDePasse'=>$hashpass,
+                                          'numeroDeTelephone'=>$tel
+                                          ]);
+                                          $_SESSION['signIn']=$email;
+
+                                       }else{
+                                          echo 'Cette adresse email existe déjà';
+                                       } 
+                                       
+                                    }else{
+                                       echo 'Le mot de passe sont pas même';
+                                    }
+
+                              }else{
+                                    echo 'Le format dadresse email est pas correct';
+                              }
+                              
+                              
+
+                           }else{
+                              echo "Les champs ne sont pas tous remplis";
+                           }
+                        }
+
+               
+               ?>
     
     
         <?php
