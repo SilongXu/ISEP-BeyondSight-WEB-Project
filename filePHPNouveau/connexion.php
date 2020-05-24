@@ -17,7 +17,7 @@
         </div>
 
         <div class="frameConnexion">
-            <form method="post" >
+            <form method="post" action="">
                 <label for="lname"><?php echo $lang['connexion_email']?></label>
                 <input class="champ" type="email" name="loginEmail" id="email" placeholder="monemail@gmail.com..." required>
 
@@ -43,11 +43,12 @@
 
 
                        if($result ==true){
-                           $_SESSION['email']=$loginEmail;
-                           $_SESSION['idUtilisateur']=$result['idUtilisateurs'];
+                            $_SESSION['email']=$loginEmail;
+                            $_SESSION['idUtilisateur']=$result['idUtilisateurs'];
                            //$hashpassword = $result['motDePasse'];
                            if(password_verify($loginPassword,$result['motDePasse'])){
                                //Ajouter les sessions ici
+
                                
                                
                                echo 'Connection en cours';
