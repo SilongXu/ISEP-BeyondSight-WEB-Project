@@ -53,7 +53,7 @@
                            if(!empty($prenom) && !empty($nom) && !empty($tel) && !empty($email) &&!empty($password) && !empty($cpassword) ){
                               if(filter_var($email,FILTER_VALIDATE_EMAIL)){
                                     if($cpassword==$password){
-                                       $options =['cost' => 12,];
+                                       $options =['cost' => 12];
                                        $hashpass =password_hash($password,PASSWORD_BCRYPT,$options);
                                        
 
@@ -68,8 +68,9 @@
                                           'prenom'=>$prenom,
                                           'nom'=>$nom,
                                           'adresseMail'=>$email,
-                                          
-                                          'motDePasse'=>$hashpass,
+                                          //Sans Densifier le mot de passe
+                                          //'motDePasse=>$hashpass',
+                                          'motDePasse'=>$password,
                                           'numeroDeTelephone'=>$tel
                                           ]);
                                           $_SESSION['signIn']=$email;
