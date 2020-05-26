@@ -35,6 +35,9 @@
 
                         <label for="cpassword"><?php echo $lang['inscription_cmdp']?></label>
                         <input class="champ" type="password" name="cpassword" id="cpassword" placeholder="1234..." required>
+
+                        <label for="verifCGU">Je confirme avoir lu les <a href="CGU.php">CGU du site</a></label>
+                        <input type="checkbox" name="verifCGU" id="verifCGU" required>
   
                         <button type="submit" name="formsend" id="formsend2" value="Ok"><?php echo $lang['inscription_envoyer']?></button>
                     </form>
@@ -102,7 +105,8 @@
     
         <?php
             if(isset($_SESSION['signIn'])){
-                header('location: '.'connexion.php');
+              echo "<script> window.location = \"connexion.php\"</script>";
+                // header('location: '.'connexion.php');
                 unset($_SESSION['signIn']);
             }
         ?>
