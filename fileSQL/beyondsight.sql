@@ -2,9 +2,9 @@
 -- version 4.9.2
 -- https://www.phpmyadmin.net/
 --
--- Hôte : 127.0.0.1:3308
--- Généré le :  sam. 09 mai 2020 à 08:31
--- Version du serveur :  8.0.18
+-- Hôte : 127.0.0.1:3306
+-- Généré le :  mar. 26 mai 2020 à 13:14
+-- Version du serveur :  10.4.10-MariaDB
 -- Version de PHP :  7.3.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -21,8 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `beyondsight`
 --
-CREATE DATABASE IF NOT EXISTS `beyondsight` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
-USE `beyondsight`;
 
 -- --------------------------------------------------------
 
@@ -31,10 +29,11 @@ USE `beyondsight`;
 --
 
 DROP TABLE IF EXISTS `categories`;
-CREATE TABLE `categories` (
-  `idCatégories` int(11) NOT NULL,
-  `sujet` varchar(45) COLLATE utf8_bin NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+CREATE TABLE IF NOT EXISTS `categories` (
+  `idCatégories` int(11) NOT NULL AUTO_INCREMENT,
+  `sujet` varchar(45) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`idCatégories`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Déchargement des données de la table `categories`
@@ -50,14 +49,15 @@ INSERT INTO `categories` (`idCatégories`, `sujet`) VALUES
 --
 
 DROP TABLE IF EXISTS `conversations`;
-CREATE TABLE `conversations` (
-  `idConversation` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `conversations` (
+  `idConversation` int(11) NOT NULL AUTO_INCREMENT,
   `idUtilisateur` int(11) NOT NULL,
   `date` datetime NOT NULL,
   `idCategorie` int(11) NOT NULL,
   `sujet` varchar(100) COLLATE utf8_bin NOT NULL,
-  `texte` varchar(1000) COLLATE utf8_bin NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+  `texte` varchar(1000) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`idConversation`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Déchargement des données de la table `conversations`
@@ -73,13 +73,14 @@ INSERT INTO `conversations` (`idConversation`, `idUtilisateur`, `date`, `idCateg
 --
 
 DROP TABLE IF EXISTS `conversationsaverifier`;
-CREATE TABLE `conversationsaverifier` (
-  `idConversationsAVerifier` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `conversationsaverifier` (
+  `idConversationsAVerifier` int(11) NOT NULL AUTO_INCREMENT,
   `idAuteur` int(11) NOT NULL,
   `idCategorie` int(11) NOT NULL,
   `sujet` varchar(100) COLLATE utf8_bin NOT NULL,
   `texte` varchar(1000) COLLATE utf8_bin NOT NULL,
-  `date` datetime NOT NULL
+  `date` datetime NOT NULL,
+  PRIMARY KEY (`idConversationsAVerifier`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
@@ -89,12 +90,13 @@ CREATE TABLE `conversationsaverifier` (
 --
 
 DROP TABLE IF EXISTS `messages`;
-CREATE TABLE `messages` (
-  `idMessages` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `messages` (
+  `idMessages` int(11) NOT NULL AUTO_INCREMENT,
   `idUtilisateur` int(11) NOT NULL,
   `idConversation` int(11) NOT NULL,
   `texte` varchar(1000) COLLATE utf8_bin NOT NULL,
-  `date` datetime NOT NULL
+  `date` datetime NOT NULL,
+  PRIMARY KEY (`idMessages`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
@@ -104,13 +106,23 @@ CREATE TABLE `messages` (
 --
 
 DROP TABLE IF EXISTS `messagesprives`;
-CREATE TABLE `messagesprives` (
-  `idMessagesPrives` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `messagesprives` (
+  `idMessagesPrives` int(11) NOT NULL AUTO_INCREMENT,
   `texte` varchar(1000) COLLATE utf8_bin NOT NULL,
   `idAuteur` int(11) NOT NULL,
   `idDestinataire` int(11) NOT NULL,
-  `objet` varchar(255) COLLATE utf8_bin NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+  `objet` varchar(255) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`idMessagesPrives`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Déchargement des données de la table `messagesprives`
+--
+
+INSERT INTO `messagesprives` (`idMessagesPrives`, `texte`, `idAuteur`, `idDestinataire`, `objet`) VALUES
+(1, 'df', 6, 5, 'dfd'),
+(2, 'Texte', 8, 7, 'Object'),
+(3, 'Texte', 9, 8, 'object');
 
 -- --------------------------------------------------------
 
@@ -119,12 +131,13 @@ CREATE TABLE `messagesprives` (
 --
 
 DROP TABLE IF EXISTS `resultats`;
-CREATE TABLE `resultats` (
-  `idResultats` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `resultats` (
+  `idResultats` int(11) NOT NULL AUTO_INCREMENT,
   `test` int(11) NOT NULL,
   `score` int(11) NOT NULL,
   `date` datetime NOT NULL,
-  `idUtilisateur` int(11) NOT NULL
+  `idUtilisateur` int(11) NOT NULL,
+  PRIMARY KEY (`idResultats`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
@@ -134,20 +147,22 @@ CREATE TABLE `resultats` (
 --
 
 DROP TABLE IF EXISTS `tests`;
-CREATE TABLE `tests` (
-  `idTest` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tests` (
+  `idTest` int(11) NOT NULL AUTO_INCREMENT,
   `capteur` varchar(45) COLLATE utf8_bin NOT NULL,
-  `test` varchar(100) COLLATE utf8_bin NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+  `test` varchar(100) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`idTest`)
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Déchargement des données de la table `tests`
 --
 
 INSERT INTO `tests` (`idTest`, `capteur`, `test`) VALUES
-(1, 'Capteur cardiaque', 'Fréquence cardiaque'),
-(2, 'Micro', 'Reconnaître une fréquence sonore'),
-(9, 'Bouton', 'Réflexe à un stimulus sonore');
+(13, 'capteur visuel', 'visuel'),
+(14, 'capteur visuel', 'visuel'),
+(9, 'Bouton', 'Réflexe à un stimulus sonore'),
+(12, 'cateur visuel', 'visuel');
 
 -- --------------------------------------------------------
 
@@ -156,15 +171,16 @@ INSERT INTO `tests` (`idTest`, `capteur`, `test`) VALUES
 --
 
 DROP TABLE IF EXISTS `utilisateurs`;
-CREATE TABLE `utilisateurs` (
-  `idUtilisateurs` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `utilisateurs` (
+  `idUtilisateurs` int(11) NOT NULL AUTO_INCREMENT,
   `nom` varchar(45) COLLATE utf8_bin NOT NULL,
   `prenom` varchar(45) COLLATE utf8_bin NOT NULL,
   `adresseMail` varchar(100) COLLATE utf8_bin NOT NULL,
-  `role` varchar(45) COLLATE utf8_bin NOT NULL,
-  `motDePasse` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `numeroDeTelephone` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+  `role` varchar(45) COLLATE utf8_bin DEFAULT NULL,
+  `motDePasse` varchar(255) COLLATE utf8_bin NOT NULL,
+  `numeroDeTelephone` int(11) NOT NULL,
+  PRIMARY KEY (`idUtilisateurs`)
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Déchargement des données de la table `utilisateurs`
@@ -175,111 +191,10 @@ INSERT INTO `utilisateurs` (`idUtilisateurs`, `nom`, `prenom`, `adresseMail`, `r
 (2, 'Lefever', 'Charles', 'charles.lefever@isep.fr', 'Administrateur', '$2y$12$.gNImlgnBCJ6wqiL4tuV/OXxIaOleQyPPppHq0Gie5zG2J55IWIGa', 646643193),
 (4, 'Pruvost', 'Benoît', 'charlotchaton@hotmail.fr', '', '$2y$12$4K4SM0X05dFOyc/mWZ0aXOXLhJwrwatxWVHLfpkkejA0cUkEvb0a6', 648764566),
 (5, 'De La Villardière', 'Bernard', 'bb.dlv@example.com', '', '$2y$12$.gNImlgnBCJ6wqiL4tuV/OXxIaOleQyPPppHq0Gie5zG2J55IWIGa', 683848271),
-(6, 'Biniou', 'Lio', 'lio@example.com', '', '$2y$12$fDKo7tPd4PWSwJ58L1qn7Oaj2KyxgLqcOJXs9s/H/8nuN.FdG.2sC', 654535454);
-
---
--- Index pour les tables déchargées
---
-
---
--- Index pour la table `categories`
---
-ALTER TABLE `categories`
-  ADD PRIMARY KEY (`idCatégories`);
-
---
--- Index pour la table `conversations`
---
-ALTER TABLE `conversations`
-  ADD PRIMARY KEY (`idConversation`);
-
---
--- Index pour la table `conversationsaverifier`
---
-ALTER TABLE `conversationsaverifier`
-  ADD PRIMARY KEY (`idConversationsAVerifier`);
-
---
--- Index pour la table `messages`
---
-ALTER TABLE `messages`
-  ADD PRIMARY KEY (`idMessages`);
-
---
--- Index pour la table `messagesprives`
---
-ALTER TABLE `messagesprives`
-  ADD PRIMARY KEY (`idMessagesPrives`);
-
---
--- Index pour la table `resultats`
---
-ALTER TABLE `resultats`
-  ADD PRIMARY KEY (`idResultats`);
-
---
--- Index pour la table `tests`
---
-ALTER TABLE `tests`
-  ADD PRIMARY KEY (`idTest`);
-
---
--- Index pour la table `utilisateurs`
---
-ALTER TABLE `utilisateurs`
-  ADD PRIMARY KEY (`idUtilisateurs`);
-
---
--- AUTO_INCREMENT pour les tables déchargées
---
-
---
--- AUTO_INCREMENT pour la table `categories`
---
-ALTER TABLE `categories`
-  MODIFY `idCatégories` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT pour la table `conversations`
---
-ALTER TABLE `conversations`
-  MODIFY `idConversation` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT pour la table `conversationsaverifier`
---
-ALTER TABLE `conversationsaverifier`
-  MODIFY `idConversationsAVerifier` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT pour la table `messages`
---
-ALTER TABLE `messages`
-  MODIFY `idMessages` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT pour la table `messagesprives`
---
-ALTER TABLE `messagesprives`
-  MODIFY `idMessagesPrives` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT pour la table `resultats`
---
-ALTER TABLE `resultats`
-  MODIFY `idResultats` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT pour la table `tests`
---
-ALTER TABLE `tests`
-  MODIFY `idTest` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
---
--- AUTO_INCREMENT pour la table `utilisateurs`
---
-ALTER TABLE `utilisateurs`
-  MODIFY `idUtilisateurs` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+(6, 'Biniou', 'Lio', 'lio@example.com', '', '$2y$12$fDKo7tPd4PWSwJ58L1qn7Oaj2KyxgLqcOJXs9s/H/8nuN.FdG.2sC', 654535454),
+(7, 'long', 'long', '645645@qq.com', NULL, '1234', 654124544),
+(8, 'Wu', 'Max', 'max.wu@isep.fr', NULL, '1234', 545454545),
+(9, 'louis', 'pierre', '94125131@qq.com', NULL, '1234', 75451254);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
