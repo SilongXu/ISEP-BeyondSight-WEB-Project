@@ -16,7 +16,7 @@
 
         <?php
             $db=new mysqli("localhost:3308","root","","beyondsight");
-            $sql ="SELECT nom,prenom,adresseMail,motDePasse,numeroDeTelephone FROM utilisateurs;"
+            $sql ="SELECT nom,prenom,adresseMail,motDePasse,numeroDeTelephone FROM utilisateurs WHERE idUtilisateurs=".$_SESSION['idUtilisateur'].";";
             $resul=$db ->query($sql);
             if($resul){
                 while($attr=$resul->fetch_row()){

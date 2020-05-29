@@ -1,26 +1,25 @@
 <?php
-    session_start();
+
     if(isset($_POST['formEdit'])){
         extract($_POST);
 
-        if(!empty($firstname) && !empty($lastname) $$ !empty($telephone) && !empty($email) &&!empty($motDePasse) && !empty($conMotDePasse)){
+        if(!empty($firstname) && !empty($lastname) && !empty($telephone) && !empty($email) &&!empty($motDePasse) && !empty($conMotDePasse)){
             if($conMotDePasse==$motDePasse){
                 $options =['cost' => 12,];
                 $hashpass =password_hash($motDePasse,PASSWORD_BCRYPT,$options);
+                $db=new PDO('mysql:host=localhost:3308;dbname=beyondsight','root','');
 
-                global $db;
+                $c = $db->prepare("SELECT email FROM utilisateurs WHERE email = :email AND idUtilisateurs != ".$_SESSION['idUtilisateur'].";");
+                $c->execute(['email'=>$email]);
+                
+                if($c->rowCount()==0){
 
-                $c = $db->prepare("SELECT email FROM utilisateurs WHERE email = :email");
-  				$c->execute(['email' => $email]);
-                $result = $c->rowCount();
-
-                if($result==0){
-
-                    $q=$db->prepare("UPDATE utilisateurs SET nom='$lastname',prenom='$firstname',adresseMail='$email',motDePasse='$motDePasse',numeroDeTelephone='$telephone', WHERE adresseMail='$_SESSION['email']'");
-
-                    $q=$db->prepare("UPDATE utilisateurs SET nom=".$lastname.",prenom=".$firstname.",adresseMail=".$email.",motDePasse=".$motDePasse.",numeroDeTelephone=".$telephone.", WHERE adresseMail=".$_SESSION['email']);
-
-                    $q->execute();
+                    $envoi=$db->prepare("UPDATE utilisateurs SET nom= :lastname , prenom=:firstname,adresseMail=:email,motDePasse=:motDePasse,numeroDeTelephone=:telephone WHERE idUtilisateurs = ".$_SESSION['idUtilisateur'].";");
+                    $envoi->execute(['lastname'=>$lastname , 
+                        'firstname'=>$firstname,
+                        'email'=>$email,
+                        'motDePasse'=>$motDePasse,
+                        'telephone'=>$telephone]);
                     $_SESSION['email']=$email;
                     $_SESSION['Edit']=$email;
                 }else{
