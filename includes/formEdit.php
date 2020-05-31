@@ -1,7 +1,15 @@
 <?php
 
     if(isset($_POST['formEdit'])){
+        usleep(100000);
         extract($_POST);
+        include("filterAttacks.php");
+        $firstname = filterAttacks($firstname, true, true);
+        $lastname = filterAttacks($lastname, true, true);
+        $telephone = (int) filterAttacks($telephone, true, true);
+        $email = filterAttacks($email, true, true);
+        $motDePasse = filterAttacks($motDePasse, true, true);
+        $conMotDePasse = filterAttacks($conMotDePasse, true, true);
 
         if(!empty($firstname) && !empty($lastname) && !empty($telephone) && !empty($email) &&!empty($motDePasse) && !empty($conMotDePasse)){
             if($conMotDePasse==$motDePasse){

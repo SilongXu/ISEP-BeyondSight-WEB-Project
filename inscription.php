@@ -51,7 +51,15 @@
 
                         global $db;
                         if(isset($_POST['formsend'])){
-                           extract($_POST);
+                            usleep(100000);
+                            extract($_POST);
+                            include("filterAttacks.php");
+                            $prenom = filterAttacks($prenom, true, true);
+                            $nom = filterAttacks($nom, true, true);
+                            $tel = (int) filterAttacks($tel, true, true);
+                            $email = filterAttacks($email, true, true);
+                            $password = filterAttacks($password, true, true);
+                            $cpassword = filterAttacks($cpassword, true, true);
 
                            if(!empty($prenom) && !empty($nom) && !empty($tel) && !empty($email) &&!empty($password) && !empty($cpassword) ){
                               if(filter_var($email,FILTER_VALIDATE_EMAIL)){

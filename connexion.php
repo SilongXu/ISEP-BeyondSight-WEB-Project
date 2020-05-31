@@ -35,7 +35,11 @@
 
                global $db;
                if(isset($_POST['formlogin'])){
+                   usleep(100000);
                    extract($_POST);
+                   include("filterAttacks.php");
+                   $loginEmail = filterAttacks($loginEmail, true, true);
+                   $loginPassword = filterAttacks($loginPassword, true, true);
            
                    if(!empty($loginEmail) && !empty($loginPassword)){
                        $q =$db->prepare("SELECT * FROM utilisateurs WHERE adresseMail = :email");

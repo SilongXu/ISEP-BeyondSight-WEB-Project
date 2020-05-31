@@ -2,7 +2,11 @@
 
     
     if(isset($_POST['formsend'])){
+        usleep(100000);
         extract($_POST);
+        include("filterAttacks.php");
+        $capteur = filterAttacks($capteur, true, true);
+        $test = filterAttacks($test, true, true);
 
    if (!empty($capteur) && !empty($test)) {
 

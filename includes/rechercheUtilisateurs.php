@@ -7,9 +7,9 @@
 	global $db;
 
 	if (isset($_GET['user'])) {
-		
 
-		$user = (String) trim($_GET['user']);
+	    include("filterAttacks.php");
+		$user = filterAttacks(trim($_GET['user']), true, true);
 
 		$req = $db->prepare("SELECT * 
 			FROM utilisateurs
