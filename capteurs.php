@@ -59,7 +59,7 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {;
 
         $q=$row["idTest"];
-        echo "<tr><td>".$row["idTest"]."</td><td>".$row["capteur"]."</td><td>".$row["test"]."</td><td><a href=\"javascript:deltest(id=".$row["idTest"].")\">Delete</a></tr>";
+        echo "<tr><td>".$row["idTest"]."</td><td>".$row["capteur"]."</td><td>".$row["test"]."</td><td><a href=\"javascript:deltest(id=".$row["idTest"].")\">Delete</a></td></tr>";
 
     }
     echo "</table>";

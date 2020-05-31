@@ -14,7 +14,7 @@
                  <?php          $db=new mysqli("localhost:3308","root","","beyondsight"); 
                  $c=$db->query("SELECT role FROM utilisateurs WHERE idUtilisateurs=".$_SESSION['idUtilisateur']);
                  $role=$c->fetch_row();
-                 if($role[0]='Administrateur'){   echo"      <div class=\"InformationUsers\" id=\"lienInfoPrive\"><a class =\"link\" href=\"InfoPrive.php\">Information des utilisateurs</a></div>";}?>
+                 if($role[0]='Administrateur'){   echo"      <div class=\"InformationUsers\" id=\"lienInfoPrive\"><a class =\"link\" href=\"InfoPrive.php?did=\">Information des utilisateurs</a></div>";}?>
                  <?php          $db=new mysqli("localhost:3308","root","","beyondsight"); 
                  $c=$db->query("SELECT role FROM utilisateurs WHERE idUtilisateurs=".$_SESSION['idUtilisateur']);
                  $role=$c->fetch_row();                 

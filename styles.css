@@ -1310,3 +1310,6 @@ button[type=submit]:hover {
 	margin-left: 10%;
 }
 
+.hidden{
+	display: none;
+}
