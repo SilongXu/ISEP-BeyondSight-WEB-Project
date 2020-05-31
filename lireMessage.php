@@ -9,6 +9,10 @@
 
     <body>
         <?php if(!isset($_SESSION['idUtilisateur'])){              echo "<script> window.location = \"404.php\"</script>";}?>
+                                 <?php          $db=new mysqli("localhost:3308","root","","beyondsight"); 
+                 $c=$db->query("SELECT idDestinataire FROM messagesprives WHERE idMessagesPrives=".$_GET["id"]);
+                 $idDest=$c->fetch_row();
+                 if($idDest[0]!=$_SESSION["idUtilisateur"]){               echo "<script> window.location = \"404.php\"</script>";}?>
         <!-- Menu Bar -->
         <?php include "includes/menubar.php" ?>
              <?php include "includes/footer.php" ?>
