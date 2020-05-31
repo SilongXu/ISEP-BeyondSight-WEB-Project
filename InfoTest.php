@@ -10,6 +10,8 @@
     	<?php include "includes/menubar.php" ?>
         <!-- Bouton Search-->
         <?php include "includes/searchbar.php" ?>
+             <?php include "includes/footer.php" ?>
+             <?php if(!isset($_SESSION['idUtilisateur'])){              echo "<script> window.location = \"404.php\"</script>";}?>
         
 
         <div id="bgConnexion"></div>
@@ -27,7 +29,7 @@
             <?php
 
                 $db=new mysqli("localhost:3308","root","","beyondsight");
-                $sql ="SELECT * From tests";
+                $sql ="SELECT * From tests WHERE idUtilisateur=".$_SESSION['idUtilisateur'];
                 $resultat=$db ->query($sql);
                 if($resultat){
                     while($attr = $resultat->fetch_row())

@@ -66,7 +66,7 @@
                                           
                                        if($result==0){
                                           
-                                          $q=$db->prepare("INSERT INTO utilisateurs(prenom,nom,adresseMail,motDePasse,numeroDeTelephone) VALUES(:prenom,:nom,:adresseMail,:motDePasse,:numeroDeTelephone)");
+                                          $q=$db->prepare("INSERT INTO utilisateurs(prenom,nom,adresseMail,motDePasse,numeroDeTelephone,role) VALUES(:prenom,:nom,:adresseMail,:motDePasse,:numeroDeTelephone,\"Utilisateur\")");
                                           $q->execute([
                                           'prenom'=>$prenom,
                                           'nom'=>$nom,

@@ -8,6 +8,7 @@
         <?php include "includes/menubar.php" ?>
         <!-- Bouton Search-->
         <?php include "includes/searchbar.php" ?>
+        
 
 
         <div id="bgConnexion">

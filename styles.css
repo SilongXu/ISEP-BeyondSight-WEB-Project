@@ -1,4 +1,4 @@
-
+	
 html {
 	margin: 0;
 	padding: 0;
@@ -978,7 +978,6 @@ button[type=submit]:hover {
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 .InformationUsers{
-	display: flex;
 	position: absolute;
 	left: 15%;top: 25%;
 	width: 250px;height: 100px;
@@ -1015,7 +1014,6 @@ button[type=submit]:hover {
 
 
 .InfoTests{
-	display: flex;
 	position: absolute;
 	width: 250px;height:100px;
 	background-color: #B8C3CB;

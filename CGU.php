@@ -8,6 +8,7 @@
     	<?php include "includes/menubar.php" ?>
         <!-- Bouton Search-->
         <?php include "includes/searchbar.php" ?>
+                <?php include "includes/footer.php" ?>
 
         <div class = "CGU_div1"></div>
 

@@ -8,8 +8,10 @@
 
 
     <body>
+        <?php if(!isset($_SESSION['idUtilisateur'])){              echo "<script> window.location = \"404.php\"</script>";}?>
         <!-- Menu Bar -->
         <?php include "includes/menubar.php" ?>
+             <?php include "includes/footer.php" ?>
         <!-- Bouton Search-->
         <?php include "includes/searchbar.php" ?>
 

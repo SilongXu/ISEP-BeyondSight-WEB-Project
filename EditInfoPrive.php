@@ -10,6 +10,8 @@
     	<?php include "includes/menubar.php" ?>
         <!-- Bouton Search-->
         <?php include "includes/searchbar.php" ?>
+                <?php include "includes/footer.php" ?>
+                <?php if(!isset($_SESSION['idUtilisateur'])){              echo "<script> window.location = \"404.php\"</script>";}?>
         
 
         <div id="bgConnexion"></div>
