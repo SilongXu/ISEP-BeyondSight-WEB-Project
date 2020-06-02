@@ -28,7 +28,7 @@
                          <?php          $db=new mysqli("localhost:3308","root","","beyondsight"); 
                  $c=$db->query("SELECT role FROM utilisateurs WHERE idUtilisateurs=".$_SESSION['idUtilisateur']);
                  $role=$c->fetch_row();
-                 if($role[0]='Utilisateur'){               echo "<script> window.location = \"404.php\"</script>";}?>
+                 if($role[0]=='Utilisateur'){               echo "<script> window.location = \"404.php\"</script>";}?>
     	<?php
 
         echo "<div class='tableauCapteur'>";
