@@ -4,7 +4,8 @@
     
         <?php include "includes/header.php" ?>
 
-    <body>
+    <body>        <!--Background de connexion-->
+        <div id="bgConnexion"></div>
     	<!-- Menu Bar -->
     	<?php include "includes/menubar.php" ?>
         <!-- Bouton Search-->
@@ -15,14 +16,8 @@
                  $c=$db->query("SELECT role FROM utilisateurs WHERE idUtilisateurs=".$_SESSION['idUtilisateur']);
                  $role=$c->fetch_row();
                  if($role[0]='Administrateur'){   echo"      <div class=\"InformationUsers\" id=\"lienInfoPrive\"><a class =\"link\" href=\"InfoPrive.php?did=\">Information des utilisateurs</a></div>";}?>
-                 <?php          $db=new mysqli("localhost:3308","root","","beyondsight"); 
-                 $c=$db->query("SELECT role FROM utilisateurs WHERE idUtilisateurs=".$_SESSION['idUtilisateur']);
-                 $role=$c->fetch_row();                 
-                 if($role[0]!='Utilisateur'){              echo "<div class=\"InfoTests\">
-            <a class =\"link\" id=\"lienCapteur\" href=\"capteurs.php?did=\">Gérer les tests</a>";}?>       
-        
-        <!--Background de connexion-->
-        <div id="bgConnexion"></div>
+
+
 
         
 
@@ -42,7 +37,12 @@
             <a class ="link" href="messagerie.php?did=">Messages</a>
         </div>
 
-
+                 <?php          $db=new mysqli("localhost:3308","root","","beyondsight"); 
+                 $c=$db->query("SELECT role FROM utilisateurs WHERE idUtilisateurs=".$_SESSION['idUtilisateur']);
+                 $role=$c->fetch_row();                 
+                 if($role[0]!='Utilisateur'){              echo "<div class=\"InfoTests\">
+            <a class =\"link\" id=\"lienCapteur\" href=\"capteurs.php?did=\">Gérer les tests</a>";}?>       
+        
 
 
 
