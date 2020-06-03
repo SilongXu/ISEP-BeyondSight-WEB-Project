@@ -1,3 +1,4 @@
+<?php include "includes/sessStart.php" ?>
 
 <!DOCTYPE html>
 <html>
@@ -29,6 +30,8 @@
 
             <label for="subject"><?php echo $lang['contact_sujet']?></label>
             <textarea id="subject" name="subject" placeholder="Écrivez ce dont vous voulez nous parler..." style="height:200px"></textarea>
+
+            <input type="hidden" name="token" id="token" value="<?php echo $_SESSION['token']; ?>" />
 
             <input type="submit" value="Envoyer">
         </form>

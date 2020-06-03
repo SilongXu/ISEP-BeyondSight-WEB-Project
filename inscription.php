@@ -1,3 +1,5 @@
+<?php include "includes/sessStart.php" ?>
+
 <!DOCTYPE html>
 <html>
     
@@ -38,7 +40,8 @@
 
                         <label for="verifCGU">Je confirme avoir lu les <a href="CGU.php">CGU du site</a></label>
                         <input type="checkbox" name="verifCGU" id="verifCGU" required>
-  
+
+                        <input type="hidden" name="token" id="token" value="<?php echo $_SESSION['token']; ?>" />
                         <button type="submit" name="formsend" id="formsend2" value="Ok"><?php echo $lang['inscription_envoyer']?></button>
                     </form>
                 </div>

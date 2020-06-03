@@ -1,3 +1,5 @@
+<?php include "includes/sessStart.php" ?>
+
 <!DOCTYPE html>
 <html >
     <?php include "includes/header.php" ?>
@@ -56,7 +58,8 @@ if ($result->num_rows > 0) {
 
                         <label for="lname">Texte</label>
                         <input class="champ" type="text" name="texte" id="texte" placeholder="Ecrivez ici votre message" required>
-  
+
+                        <input type="hidden" name="token" id="token" value="<?php echo $_SESSION['token']; ?>" />
                         <input type="submit" name="formsend" id="formsend" value="Ok">
                     </form>
                                     <?php  include 'includes/database.php';

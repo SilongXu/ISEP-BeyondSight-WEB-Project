@@ -1,3 +1,5 @@
+<?php include "includes/sessStart.php" ?>
+
 <!DOCTYPE html>
 <html >
     <?php include "includes/header.php" ?>
@@ -76,7 +78,8 @@ $conn->close();
 
                         <label for="lname">Type de test</label>
                         <input class="champ" type="text" name="test" id="test" placeholder="Mon test" required>
-  
+
+                        <input type="hidden" name="token" id="token" value="<?php echo $_SESSION['token']; ?>" />
                         <input type="submit" name="formsend" id="formsend" value="Ok">
                     </form>
                                     <?php  include 'includes/database.php"';

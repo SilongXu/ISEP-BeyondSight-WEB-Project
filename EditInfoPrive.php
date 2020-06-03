@@ -1,4 +1,4 @@
-
+<?php include "includes/sessStart.php" ?>
 
 <!DOCTYPE html>
 <html>
@@ -42,7 +42,8 @@
 
                             <label for="lname">Confirmer votre mot de passe</label>
                             <input class="champEdit" type="text" id="" name="conMotDePasse" value="<?php echo $attr[3];?>">
-            
+
+                            <input type="hidden" name="token" id="token" value="<?php echo $_SESSION['token']; ?>" />
                             <input type="submit" value="Envoyer" name="formEdit">
                         </form>
         

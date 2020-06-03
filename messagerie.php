@@ -1,3 +1,5 @@
+<?php include "includes/sessStart.php" ?>
+
 <!DOCTYPE html>
 <html >
     <?php include "includes/header.php" ?>

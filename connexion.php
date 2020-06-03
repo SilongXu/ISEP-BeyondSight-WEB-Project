@@ -1,3 +1,5 @@
+<?php include "includes/sessStart.php" ?>
+
 <!DOCTYPE html>
 <html>
     
@@ -25,6 +27,7 @@
                 <label for="lname"><?php echo $lang['connexion_mdp']?></label>
                 <input class="champ" type="password" name="loginPassword" id="password" placeholder="1234..." required>
 
+                <input type="hidden" name="token" id="token" value="<?php echo $_SESSION['token']; ?>" />
                 <input type="submit" name="formlogin" id="formlogin" value="Login">
             </form>
         </div>
