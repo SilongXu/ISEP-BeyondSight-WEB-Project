@@ -14,7 +14,7 @@
     <nav class = "menu_bar">
         <div class = "left">
             <a href="accueil.php">
-                <img src="images/logoinfinitemeasures.png">
+                <img class="logoblue" src="images/logoinfinitemeasures.png">
 <!--                 <div><img src="images/logo_blanc_sans_fleche.png" class = "chrono"></div>
                 <div><img src="images/logo_blanc_fleche2.png" class = "fleche"></div> -->
             </a>

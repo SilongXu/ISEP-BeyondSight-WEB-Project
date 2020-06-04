@@ -82,15 +82,27 @@ html {
     background-color: #5F829B;
     color: white;
 }
-
+/*
 .menu_bar img {
 	width: 30px;
 	border-radius: 50%;
 	transform: rotate(0deg);
 	transition: transform 1s ease-out;
 	position: absolute;
+}*/
+
+.menu_bar .logoblue {
+	width: 30px;
+	border-radius: 50%;
+	transition: width 0.3s ease-out;
+	position: absolute;
 }
 
+.menu_bar .logoblue:hover {
+	width: 120px;
+	transition: width 0.5s ease-out;
+}
+/*
 .menu_bar .fleche {
 	width: 25px;
 	margin: 2px 5px;
@@ -99,7 +111,7 @@ html {
 .menu_bar .fleche:hover {
 	transform : rotate(360deg);
 	transition: transform 0.5s ease-out;
-}
+}*/
 
 .menu_bar .active {
     background-color: #28576D;
@@ -596,6 +608,7 @@ html {
 	background-color: #192933;
 	text-align: center;
 	line-height: 150%;
+	color: white;
 }
 
 .footer a{
@@ -799,10 +812,10 @@ input[type=submit]:hover {
 }
 
 .graphiqueInfos{
-    border: linear-gradient(to right, red, purple);
+    /*border: linear-gradient(to right, red, purple);*/
     background: white;
     z-index: 10; 
-      margin-left: auto;
+	margin-left: auto;
     margin-right: auto;
     margin-top: 100px;
     width: 900px;
@@ -813,8 +826,16 @@ input[type=submit]:hover {
 	background: url('images/incription_connexion.jpg');
 	width: 100%;height: 100%;
 	position: absolute;left: 0px;top: 0px;
-	
 }
+
+#bgConnexion2{
+	display: flex;
+	background: url('images/incription_connexion.jpg');
+	width: 100%;height: 100%;
+	position: absolute;left: 0px;top: 0px;
+	opacity: 0;
+}
+
 #h2Connexion{
 	position: absolute;
 	left: 42%;
@@ -1059,24 +1080,75 @@ button[type=submit]:hover {
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
+
+.backgroundInfoPrive{
+	display: flex;
+	background: url('images/incription_connexion.jpg');
+	width: 100%;height: 100%;
+	position: absolute;left: 0px;top: 0px;
+	background-attachment: fixed;
+
+}
+
 .partieDeDonnee{
-	width: 50%;
-	height: 400px;
+	width: 87%;
 	background-color: #B8C3CB;
 	display: flex;
 	position: absolute;
 	top: 25%;
-	left: 25%;
+	left: 10%;
 	border-radius: 5px;
 }
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th, td {
+	text-align: left;
+	padding: 8px;
+}
+
+tr:nth-child(even) {background-color: #B8C3CB;}
+
+.lienResultatsGraphiques{
+	position: absolute;
+	z-index: 30;
+	top: 15%;
+	left: 15%;
+	background-color: #2e484c;
+	border-radius: 20px;
+}
+
+.lienResultatsGraphiques a {
+	display: block;
+	color: #FFF;
+	padding: 8px 16px 8px 16px;
+	min-width: 100px;
+	text-decoration: none;
+	text-align: center;
+	border-radius: 20px;
+	transition: background-color 0.3s ease-out,
+	color 0.1s ease-out;
+}
+
+.lienResultatsGraphiques a:hover {
+	background-color: #5F829B;
+	color: white;
+}
+
 .partieEditInformation{
-	width: 550px;height: 650px;
-	background-color: red;
+	width: 550px;
+	height: 570px;
+	padding: 20px;
+	background-color: #4F6B7F;
 	display: flex;
 	position: absolute;
 	left: 35%;
 	top: 20%;
-	border-radius: 5px;
+	border-radius: 10px;
+	color: white;
 }
 
 .form .champEdit {
@@ -1102,9 +1174,9 @@ button[type=submit]:hover {
 
 .tableauCapteur{
 	position: absolute;
-	left: 37%;top: 25%;
+	left: 37%;
 	width: 400px;height: 150px;
-	top:200px;
+	top:150px;
 	border-radius: 5px;
 	position:relative;
     display: grid;
@@ -1131,8 +1203,8 @@ button[type=submit]:hover {
 .formbis {
 	position: absolute;
 	left:30%;
-	top: 80%;
-	height: 300px;
+	top: 57%;
+	height: 280px;
 	border-radius: 20px;
 	width: 40%;
 	background-color: #DFE7EE;

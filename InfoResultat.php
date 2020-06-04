@@ -52,6 +52,8 @@
             </table>
         </div>
 
+    <div class="lienResultatsGraphiques"><a href="InfoResultatGraphique.php">Vos résultats en graphique</a></div>
+
 
 
     </body>

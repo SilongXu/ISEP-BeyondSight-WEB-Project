@@ -5,7 +5,7 @@
     
         <?php include "includes/header.php" ?>
 
-    <body>
+    <body class="backgroundInfoPrive">
             <script>
 
    function deluser(id){
@@ -29,12 +29,12 @@
                  $role=$c->fetch_row();
                  if($role[0]!='Administrateur'){               echo "<script> window.location = \"404.php\"</script>";}
                                  if($_GET['did']!=""){
-            $db->query("delete from uitlisateurs where idUtilisateurs=".$_GET["did"]);
+            $db->query("delete from utilisateurs where idUtilisateurs=".$_GET["did"]);
         }?>
 
 
 
-        <div id="bgConnexion"></div>
+        <div id="bgConnexion2"></div>
 
         <div class="partieDeDonnee">
         <table cellpadding="0" cellspacing="0" width="95%"  >
@@ -43,7 +43,7 @@
                     <td>Nom</td>
                     <td>Prénom</td>
                     <td>Adresse e-mail</td>
-                    <td>Rôle</td>
+                    <td>                        Rôle                        </td>
                     <td>Numero De Telephone</td>
                     <td>Supprimer</td>
                     <td>Confirmer changement de rôle</td>
@@ -54,6 +54,8 @@
                 $sql ="SELECT idUtilisateurs,nom,prenom,adresseMail,numeroDeTelephone,role From utilisateurs ";
                 $resultat=$db ->query($sql);
                 if($resultat){
+                    $idUser = -1;
+                    $role = "";
                     while($attr = $resultat->fetch_row())
                     {
             ?>
@@ -65,6 +67,7 @@
                     <td> <?php echo $attr[3];?> </td>
                     <td>
                         <select class="champ" name="role" id="role" value=<?php echo $attr[5];?>>
+                            <option value="<?php echo $attr[5];?>">- <?php echo $attr[5];?> -</option>
                             <option value="Administrateur" >Administrateur</option>
                             <option value="Gestionnaire" >Gestionnaire</option>
                             <option value="Utilisateur" >Utilisateur</option>
@@ -72,7 +75,7 @@
                             <input class="hidden" type="text" id="idUser" name="idUser" value="<?php echo $attr[0];?>">
                     </td>
                     <td> <?php echo $attr[4];?> </td>
-                    <td><?php echo "<a href=\"javascript:deltest(id=".$attr[0].")\">Delete</a>"?></td>
+                    <td><?php echo "<a href=\"javascript:deluser(id=".$attr[0].")\">Delete</a>"?></td>
                     <td><input type="submit" name="formsend" id="formsend" value="Ok"></td>
                 </tr>
             </form>
@@ -81,7 +84,13 @@
             </table>
         </div>
         
-<?php include 'includes/editUserRole.php'?>
+<?php
+
+if (isset($_POST)) {
+    include 'includes/editUserRole.php';
+}
+
+?>
 
 
     </body>

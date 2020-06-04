@@ -68,7 +68,7 @@
                               if(filter_var($email,FILTER_VALIDATE_EMAIL)){
                                     if($cpassword==$password){
                                        $options =['cost' => 12];
-                                       $hashpass =password_hash($password,PASSWORD_BCRYPT,$options);
+                                       $hashpass = password_hash($password,PASSWORD_BCRYPT,$options);
                                        
 
                                        $c = $db->prepare("SELECT adresseMail FROM utilisateurs WHERE adresseMail = :email");
@@ -82,9 +82,8 @@
                                           'prenom'=>$prenom,
                                           'nom'=>$nom,
                                           'adresseMail'=>$email,
-                                          //Sans Densifier le mot de passe
-                                          //'motDePasse=>$hashpass',
-                                          'motDePasse'=>$password,
+                                          //Sans Densifier le mot de passe !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                                          'motDePasse'=>$hashpass,
                                           'numeroDeTelephone'=>$tel
                                           ]);
 

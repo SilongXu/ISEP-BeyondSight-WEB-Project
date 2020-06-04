@@ -56,8 +56,10 @@
                             $_SESSION['email']=$loginEmail;
                             $_SESSION['idUtilisateur']=$result['idUtilisateurs'];
 
+                           $options =['cost' => 12];
+                           $loginPassword = password_hash($loginPassword,PASSWORD_BCRYPT,$options);
                             
-                           //$hashpassword = $result['motDePasse'];
+                           $hashpassword = $result['motDePasse']; // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                            if(password_verify($loginPassword,$result['motDePasse'])){
                                //Ajouter les sessions ici
 

@@ -31,17 +31,17 @@
                             <label for="lname">Nom</label>
                             <input class="champEdit" type="text" id="lname" name="lastname" value="<?php echo $attr[0];?>">
 
-                            <label for="lname">Téléphone</label>
-                            <input class="champEdit" type="text" id="" name="telephone" value="<?php echo $attr[4];?>">
+                            <label for="tel">Téléphone</label>
+                            <input class="champEdit" type="text" id="tel" name="telephone" value="<?php echo $attr[4];?>">
 
-                            <label for="lname">Email</label>
-                            <input class="champEdit" type="email" id="" name="email" value="<?php echo $attr[2];?>">
+                            <label for="mail">Email</label>
+                            <input class="champEdit" type="email" id="mail" name="email" value="<?php echo $attr[2];?>">
 
-                            <label for="lname">Mot de passe</label>
-                            <input class="champEdit" type="text" id="" name="motDePasse" value="<?php echo $attr[3];?>">
+                            <label for="mdp">Mot de passe</label>
+                            <input class="champEdit" type="password" id="mdp" name="motDePasse" required>
 
-                            <label for="lname">Confirmer votre mot de passe</label>
-                            <input class="champEdit" type="text" id="" name="conMotDePasse" value="<?php echo $attr[3];?>">
+                            <label for="cmdp">Confirmer votre mot de passe</label>
+                            <input class="champEdit" type="password" id="cmdp" name="conMotDePasse" required>
 
                             <input type="hidden" name="token" id="token" value="<?php echo $_SESSION['token']; ?>" />
                             <input type="submit" value="Envoyer" name="formEdit">

@@ -26,7 +26,7 @@
                     $envoi->execute(['lastname'=>$lastname , 
                         'firstname'=>$firstname,
                         'email'=>$email,
-                        'motDePasse'=>$motDePasse,
+                        'motDePasse'=>$hashpass, // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                         'telephone'=>$telephone]);
                     $_SESSION['email']=$email;
                     $_SESSION['Edit']=$email;
